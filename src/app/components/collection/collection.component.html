@@ -1,0 +1,14 @@
+<div class="container">
+    <div class="collection">
+        <div class="filtre"></div>
+        <div class="liste">
+            <div class="case" *ngFor="let plante of plantes">
+                <div class="genre">{{ plante.genre | uppercase }} <div>
+                <div class="espece">{{ plante.espece }}</div>
+                <img [src]="'assets/plantes/' + plante.image" alt="plante">
+                <div class="dispo">{{ plante.dispo ? 'en stock' : 'en rupture de stock' }}</div>
+                <div class="prix">{{ plante.prix }} €</div>
+            </div>
+        </div>
+    </div>
+</div>

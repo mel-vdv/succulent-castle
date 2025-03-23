@@ -1,0 +1,37 @@
+.container {
+    background-color: white;
+    width: 100vw;
+    height: 85vh;
+
+    .collection {
+    background-color: #363333;
+        width: min(100vw, 1200px);
+        margin: auto;
+
+        .filtre {
+            background-color: rgb(216, 185, 185);
+            height: 50px;
+            width: 100%;
+        }
+
+        .liste {
+            display: flex;
+            flex-direction: row;
+            flex-wrap: wrap;
+            gap: 30px;
+            height: auto;
+
+            .case {
+                flex-direction: column;
+                align-items: center;
+                text-align: center;
+                width: 250px;
+
+                img {
+                    width: 100%;
+                    height: auto;
+                }
+            }
+        }
+    }
+}

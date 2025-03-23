@@ -1,0 +1,15 @@
+<div class="container">
+    <div class="account">
+        <div class="nav">
+            <div (click)="choix = 0;">mes adresses</div>
+            <div (click)="choix = 1;">mes commandes</div>
+            <div (click)="choix = 2;">mes moyens de paiement</div>
+            <div (click)="choix = 3;">déconnexion</div>
+        </div>
+        
+        <app-addresses *ngIf="choix === 0"></app-addresses>
+        <app-orders *ngIf="choix === 1"></app-orders>
+        <app-bank-cards *ngIf="choix === 2"></app-bank-cards>
+        <app-connection *ngIf="choix === 3"></app-connection>
+    </div>
+</div>
