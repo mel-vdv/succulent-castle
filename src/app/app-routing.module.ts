@@ -12,9 +12,12 @@ import { BankCardsComponent } from './components/account/bank-cards/bank-cards.c
 import { OrdersComponent } from './components/account/orders/orders.component';
 import { DescriptionComponent } from './components/description/description.component';
 import { FaqComponent } from './components/faq/faq.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { CancelComponent } from './components/payment/cancel/cancel.component';
+import { SuccessComponent } from './components/payment/success/success.component';
 
 const routes: Routes = [
-  { path: "", component: HomeComponent},
+  { path: "", component: PaymentComponent},
   { path: "home", component: HomeComponent},
   { path: "collection", component: CollectionComponent},
   { path: "description/:plant", component: DescriptionComponent},
@@ -23,6 +26,9 @@ const routes: Routes = [
   { path: "account/orders", component: OrdersComponent},
   { path: "account/bank-cards", component: BankCardsComponent},
   { path: "account/connection", component: ConnectionComponent},
+  { path: "payment", component: PaymentComponent},
+  { path: "payment/success", component: SuccessComponent},
+  { path: "payment/cancel", component: CancelComponent},
   { path: "faq", component: FaqComponent},
   { path: "rgpd", component: RgpdComponent},
   { path: '**', component: NotFoundComponent}

@@ -16,11 +16,21 @@ import { BankCardsComponent } from './components/account/bank-cards/bank-cards.c
 import { ConnectionComponent } from './components/account/connection/connection.component';
 import { OrdersComponent } from './components/account/orders/orders.component';
 import { AddressesComponent } from './components/account/addresses/addresses.component';
-import { PaymentComponent } from './components/payment/payment.component';
 import { NavigComponent } from './components/navig/navig.component';
 import { Footer2Component } from './components/footer2/footer2.component';
 import { AccountComponent } from './components/account/account.component';
 import { NotFoundComponent } from './components/not-found/not-found.component';
+import { CancelComponent } from './components/payment/cancel/cancel.component';
+import { SuccessComponent } from './components/payment/success/success.component';
+import { PaymentComponent } from './components/payment/payment.component';
+import { ReactiveFormsModule } from '@angular/forms';
+
+//firebase MODULAIRE
+import { environment } from '../environments/environment';
+import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
+import { provideDatabase,getDatabase } from '@angular/fire/database';
+import { provideStorage, getStorage } from '@angular/fire/storage';
+import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 @NgModule({
   declarations: [
@@ -38,17 +48,35 @@ import { NotFoundComponent } from './components/not-found/not-found.component';
     ConnectionComponent,
     OrdersComponent,
     AddressesComponent,
-    PaymentComponent,
     NavigComponent,
     Footer2Component,
     AccountComponent,
-    NotFoundComponent
+    NotFoundComponent,
+    PaymentComponent,
+    CancelComponent,
+    SuccessComponent
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    ReactiveFormsModule,
+    provideFirebaseApp(() => initializeApp(environment.firebase)),
+
+    provideFirestore(() => getFirestore()),
+    provideDatabase(() => getDatabase()),
+    provideStorage(() => getStorage())
+/*
+    TranslateModule.forRoot({
+      loader: {
+        provide: TranslateLoader,
+        useFactory: HttpLoaderFactory,
+        deps: [HttpClient]
+      }
+    })
+      */
   ],
-  providers: [],
+  providers: [ 
+  ],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
