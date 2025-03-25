@@ -1,16 +1,53 @@
 <div class="container">
     <div class="navig">
-        <div routerLink="/home">
-            HOME
+
+        <div class="gauche">
+            <div routerLink="/home">
+                {{"home"|translate}}
+            </div>
+            <div routerLink="/collection">
+                {{"shop"|translate}}
+            </div>
+            <div routerLink="/gift">
+                {{"gift"|translate}}
+            </div>
+            <div routerLink="/faq">
+                FAQ
+            </div>
+            <div routerLink="/advices">
+                {{"advices"|translate}}
+            </div>
         </div>
-        <div routerLink="/collection">
-            COLLECTION
-        </div>
-        <div routerLink="/account">
-            MON PROFIL
-        </div>
-        <div routerLink="/faq">
-            FAQ
+
+        <div class="droite">
+            <div routerLink="/favorites">
+                <img src="assets/icons/coeur.svg" alt="icons">
+            </div>
+            <div routerLink="/shopping-cart">
+                <img src="assets/icons/cart.svg" alt="icons">
+            </div>
+            <div routerLink="/account">
+                <img src="assets/icons/profil.svg" alt="icons">
+                {{"account"|translate}}
+            </div>
+            <div routerLink="/account/connexion">
+                <img src="assets/icons/exit.svg" alt="icons">
+                {{"déco"|translate}}
+            </div>
+
         </div>
     </div>
 </div>
+
+<!--
+    "home": "Accueil",
+    "shop": "Boutique",
+    "collection": "Collection",
+    "gift": "Idées cadeaux",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "advices": "Entretien et Culture",
+    "account": "Mon compte",
+    "connexion": "Connexion",
+    "déco": "Déconnecter",
+-->

@@ -1,0 +1,20 @@
+body {
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top: 0;
+    left: 0;
+    padding: 0;
+    margin: 0;
+    overflow: auto;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+}
+::-webkit-scrollbar {
+    display: none;
+}
+::ng-deep .container > div:first-child {
+    width: min(100vw, 1200px);
+    margin: auto;
+}
+

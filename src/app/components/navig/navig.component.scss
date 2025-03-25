@@ -1,0 +1,36 @@
+.container{
+    .navig {
+        width: min(100vw,90%);
+        display: flex;
+        justify-content: space-between;
+
+        div {
+            display: flex; align-items: center; justify-content: center;
+            padding: 5px;
+            gap: 50px;
+        }
+
+        .gauche {
+            text-transform: uppercase;
+            font-weight: bold;
+            div:hover {
+                text-decoration: underline;
+            }
+        }
+        .droite {
+            gap: 0;
+            div {
+                gap: 5px;
+                &:hover {
+                    background-color: rgba(0,0,0,0.1);
+                    border-radius: 4px;
+                }
+            }
+            img[alt='icons'] {
+                height: 30px;
+                max-width: 30px;
+                margin: 0;
+            }
+        }
+    }
+}

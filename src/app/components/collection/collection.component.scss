@@ -1,17 +1,17 @@
 .container {
-    background-color: white;
+    background-color: rgba(0,0,0,0.05);
+    box-shadow: 0 0 5px black;
     width: 100vw;
-    height: 85vh;
 
     .collection {
-    background-color: #363333;
-        width: min(100vw, 1200px);
+        width: min(100vw, 1400px);
         margin: auto;
 
         .filtre {
             background-color: rgb(216, 185, 185);
             height: 50px;
             width: 100%;
+            margin: 10px 0;
         }
 
         .liste {
@@ -30,6 +30,11 @@
                 img {
                     width: 100%;
                     height: auto;
+                    border-radius: 10px;
+                    box-shadow: 0 0 10px rgb(0,0,0);
+                }
+                .genre {
+                    font-weight: bold;
                 }
             }
         }

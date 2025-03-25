@@ -1,0 +1,95 @@
+{
+    "annonce": "Livraison offerte en France et en Belgique à partir de 50€ d'achat",
+
+    "home": "Accueil",
+    "shop": "Boutique",
+    "collection": "Collection",
+    "gift": "Idées cadeaux",
+    "faq": "FAQ",
+    "contact": "Contact",
+    "advices": "Entretien et Culture",
+    "account": "Mon compte",
+    "connexion": "Connexion",
+    "déco": "Déconnecter",
+
+    "filtrer-par-genre": "Filtrer par genre",
+    "all": "tous",
+    "ordonner-par": "Ordonner par",
+    "prix-croissant": "prix croissant",
+    "prix-decroissant": "prix décroissant",
+    "produits": "produits",
+
+    "slogan1": "Minimalistes - Résistantes - Décalées",
+    "slogan2": "comme vous",
+    "slogan3": "Faites entrer la résilience dans votre intérieur",
+    "paiement-secure": "Paiement sécurisé",
+    "livraison-rapide": "Livraison rapide",
+    "emballage-adapte": "Emballage adapté",
+    "service-client": "Contacter notre service client",
+
+    "activite": "Vente en ligne de plantes grasses succulentes",
+    "adresse":"Chaussée de Malines 274",
+    "pays": "Belgique",
+    "follow-us": "Suivez-nous",
+    "liens-utiles": "Liens utiles",
+    "a-propos": "A propos",
+    "contact-us": "Nous contacter",
+    "info-livr": "Info sur la livraison",
+    "cgv": "Conditions générales de vente",
+    "rgpd": "Politique de confidentialité",
+
+
+    "shopping-carth1": "Votre panier",
+    "poursuivre": "Continuer vos achats",
+    "produit":"Produit",
+    "montant":"Montant",
+    "total":"Total",
+    "frais-port":"frais de port calculés à la caisse",
+    "payer":"Régler",
+
+    "deliveryh1":"Livraison",
+    "prenom":"Prénom",
+    "nom":"Nom",
+    "compl-adresse":"Complément d'adresse",
+    "cp":"Code postal",
+    "ville":"Ville",
+    "tel":"Téléphone",
+
+    "paymenth1": "Paiement",
+    "payment-p":"Toutes les transactions sont sécurisées et cryptées",
+    "bon-gift":"Carte cadeau",
+    "bon-reduc":"Code de réduction",
+    "apply":"Appliquer",
+    "sous-tot":"sous-total - {{n}} articles",
+    "expedition":"Expédition",
+    "tva-incluse":"TVA de {n} € incluse",
+
+    "account-h1":"Mon compte",
+    "se-co":"Se connecter",
+    "se-deco":"Se déconnecter",
+    "email":"Email",
+    "mdp":"Mot de passe",
+    "create-account":"Créer un compte",
+    "histo-commandes":"Historique des commandes",
+    "details":"Détails du compte",
+    
+    
+    "homeh1":"La pépinière",
+    "home-p":"Chez Succulent Castle, notre mission est simple : apporter de la beauté dans vos foyers grâce à des êtres vivants aussi discrets qu’extraordinaires. Avec leurs couleurs vives, leurs formes originales et leur étonnante capacité à prospérer avec si peu, les succulentes sont le symbole parfait de la résilience — encore elle, toujours elle. Pour cultiver cette magie, j’ai parcouru le monde : de la Californie à l’Alabama, en passant par la Suède, l’Italie, le Portugal ou encore l’Espagne. À partir de graines soigneusement sélectionnées, j’ai recréé de nouvelles souches, uniques, robustes et prêtes à illuminer vos intérieurs d’une touche de nature et de poésie.",
+
+    "faqh1":"Questions fréquemment posées",
+    "faq-p":"Consultez la FAQ, si vous avez encore besoin d'aide, contactez-nous au",
+
+
+    "nl1": "Abonnez-vous pour être au courant des offres et exclusivités",
+    "nl2": "Obtenez 15% de réduction sur votre prochain achat",
+    "nl-accept": "J'accepte la politique de confidentialité concernant l'utilisation de mes données personnelles",
+    "nl-link-rgpd": "Lire la politique de confidentialité",
+
+    "footer2": "Tous droits réservés"
+
+
+    
+    
+
+}

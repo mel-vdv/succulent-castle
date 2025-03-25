@@ -15,12 +15,21 @@ import { FaqComponent } from './components/faq/faq.component';
 import { PaymentComponent } from './components/payment/payment.component';
 import { CancelComponent } from './components/payment/cancel/cancel.component';
 import { SuccessComponent } from './components/payment/success/success.component';
+import { AdvicesComponent } from './components/advices/advices.component';
+import { ContactComponent } from './components/contact/contact.component';
+import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
+import { CgvComponent } from './components/cgv/cgv.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
 
 const routes: Routes = [
   { path: "", component: PaymentComponent},
   { path: "home", component: HomeComponent},
   { path: "collection", component: CollectionComponent},
   { path: "description/:plant", component: DescriptionComponent},
+  { path: "advices", component: AdvicesComponent},
+  { path: "contact", component: ContactComponent},
+  { path: "shopping-cart", component: ShoppingCartComponent},
+  { path: "favorites", component: FavoritesComponent},
   { path: "account", component: AccountComponent},
   { path: "account/addresses", component: AddressesComponent},
   { path: "account/orders", component: OrdersComponent},
@@ -30,6 +39,7 @@ const routes: Routes = [
   { path: "payment/success", component: SuccessComponent},
   { path: "payment/cancel", component: CancelComponent},
   { path: "faq", component: FaqComponent},
+  { path: "cgv", component: CgvComponent},
   { path: "rgpd", component: RgpdComponent},
   { path: '**', component: NotFoundComponent}
 ];
