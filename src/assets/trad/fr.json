@@ -38,7 +38,6 @@
     "cgv": "Conditions générales de vente",
     "rgpd": "Politique de confidentialité",
 
-
     "shopping-carth1": "Votre panier",
     "poursuivre": "Continuer vos achats",
     "produit":"Produit",
@@ -54,6 +53,23 @@
     "cp":"Code postal",
     "ville":"Ville",
     "tel":"Téléphone",
+
+    "contactez-nous": "Contactez-nous ici",
+    "form-contact": "Contactez-nous en ligne",
+    "speech-contact": "Vous avez des questions, des remarques à nous soumettre? <br/> N'hésitez pas à nous contacter, nous vous répondrons avec plaisir dans les plus brefs délais!",
+    "sur-les-reseaux": "Sur les réseaux sociaux",
+    "champs-oblig": "* Champ obligatoire",
+    "objet": "Objet",
+    "message": "Veuillez écrire votre message",
+    "envoyer": "Envoyer",
+    "nous-tel": "Par téléphone",
+    "nous-ecrire": "Ecrivez-nous à l'adresse suivante:",
+    "par-email": "Par email",
+    "joignable": "Nous sommes joignables au:",
+    "follow": "Vous pouvez nous suivre et nous écrire sur",
+    "required": "Champ requis",
+    "email-invalide": "Entrez une adresse email valide",
+    "case-rgpd": "En soumettant ce formulaire, j'autorise que les informations saisies dans ce formulaire soient utilisées pour permettre de me recontacter et j'accepte la politique de confidentialité du site.",
 
     "paymenth1": "Paiement",
     "payment-p":"Toutes les transactions sont sécurisées et cryptées",
@@ -73,20 +89,43 @@
     "histo-commandes":"Historique des commandes",
     "details":"Détails du compte",
     
-    
     "homeh1":"La pépinière",
     "home-p":"Chez Succulent Castle, notre mission est simple : apporter de la beauté dans vos foyers grâce à des êtres vivants aussi discrets qu’extraordinaires. Avec leurs couleurs vives, leurs formes originales et leur étonnante capacité à prospérer avec si peu, les succulentes sont le symbole parfait de la résilience — encore elle, toujours elle. Pour cultiver cette magie, j’ai parcouru le monde : de la Californie à l’Alabama, en passant par la Suède, l’Italie, le Portugal ou encore l’Espagne. À partir de graines soigneusement sélectionnées, j’ai recréé de nouvelles souches, uniques, robustes et prêtes à illuminer vos intérieurs d’une touche de nature et de poésie.",
 
     "faqh1":"Questions fréquemment posées",
     "faq-p":"Consultez la FAQ, si vous avez encore besoin d'aide, contactez-nous au",
+    "theme-a": "Acheter des plantes succulentes",
+    "q0-0": "Je souhaite acheter des plantes succulentes et l'adresse de livraison n'est pas reconnue.",
+    "r0-0": "Dans la plupart des cas, cela est dû au fait que la commande n'atteint pas le montant minimum de 25 € de produits. En dessous de ce montant, le système réagit avec cette défaillance. Veuillez également vérifier si votre pays est éligible à l'expédition. Si vous remplissez ces deux conditions, si l'erreur persiste, veuillez nous contacter par email à thesucculentcastle@gmail.com",
+    "theme-b": "Retours",
+    "q1-0": "Ma commande est arrivée en mauvais état. Que dois-je faire?",
+    "r1-0": "Lorsque vous ouvrez votre commande et constatez un dommage sur le produit, veuillez le documenter en prenant des photos et nous contacter à thesucculentcastle@gmail.com",
+    "theme-c": "Expédition",
+    "q2-0":"Combien coûtent les frais de livraison ? La livraison est-elle gratuite ?",
+    "r2-0": "Expédition standard - jusqu'à 2 Kg",
+    "q2-1": "Combien de temps faut-il pour préparer ma commande ? Combien de jours prend mon envoi ?",
+    "r2-1": "Dans des conditions normales, Les plantes sont expédiées dans les 48h. Le service de livraison national standard (Belgique) livre dans les 24/48 heures, et le service de messagerie international (Europe) livre dans les 5 à 7 jours.",
+    "q2-2": "Puis-je modifier l'adresse de livraison une fois la commande expédiée ?",
+    "r2-2": "Une fois votre commande expédiée, vous recevrez un SMS sur votre téléphone de la part de la société de messagerie. Vous pouvez utiliser ce message pour modifier l'adresse de livraison si elle se trouve dans votre ville et que la commande n'est pas encore en cours de livraison. Dans toutes les autres situations, si vous avez encore besoin d'aide, veuillez nous contacter à thesucculentcastle@gmail.com",
 
+    "theme-d": "Non classé",
+    "q3-0": "Avez-vous un magasin physique ou un numéro de téléphone de contact ?",
+    "r3-0": "Pour toute question ou demande de renseignements, veuillez nous contacter à thesucculentcastle@gmail.com",
 
     "nl1": "Abonnez-vous pour être au courant des offres et exclusivités",
     "nl2": "Obtenez 15% de réduction sur votre prochain achat",
     "nl-accept": "J'accepte la politique de confidentialité concernant l'utilisation de mes données personnelles",
     "nl-link-rgpd": "Lire la politique de confidentialité",
 
-    "footer2": "Tous droits réservés"
+    "footer2": "Tous droits réservés",
+
+    "taxes-frais": "Taxes incluses. Les frais d'expédition sont calculés à l'étape de paiement.",
+    "add-panier": "Ajouter au panier",
+    "share": "Partager",
+    "qte": "Quantité"
+
+
+
 
 
     

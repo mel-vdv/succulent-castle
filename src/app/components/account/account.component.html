@@ -1,26 +1,12 @@
 <div class="container">
-    <div class="account">
-        <div class="nav">
-            <div (click)="choix = 0;">mes adresses</div>
-            <div (click)="choix = 1;">mes commandes</div>
-            <div (click)="choix = 2;">mes moyens de paiement</div>
-            <div (click)="choix = 3;">déconnexion</div>
+    <div class="account" *ngIf="user$ | async as user">
+        <div *ngIf="!!user; else noLoggin">
+            {{user.displayName}}, {{user.email}}
+            <button (click)="addAddress(user)">ajouter une adresse</button>
+            <button (click)="signOut()">me déconnecter</button>
         </div>
-        
-        <app-addresses *ngIf="choix === 0"></app-addresses>
-        <app-orders *ngIf="choix === 1"></app-orders>
-        <app-bank-cards *ngIf="choix === 2"></app-bank-cards>
-        <app-connection *ngIf="choix === 3"></app-connection>
+        <ng-template #noLoggin>
+            <button (click)="signInWithGoogle()">me connecter</button>
+        </ng-template>
     </div>
 </div>
-
-<!--
-  "account-h1":"Mon compte",
-    "se-co":"Se connecter",
-    "se-deco":"Se déconnecter",
-    "email":"Email",
-    "mdp":"Mot de passe",
-    "create-account":"Créer un compte",
-    "histo-commandes":"Historique des commandes",
-    "details":"Détails du compte",
--->

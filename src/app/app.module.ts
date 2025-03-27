@@ -12,10 +12,6 @@ import { FaqComponent } from './components/faq/faq.component';
 import { TitleComponent } from './components/title/title.component';
 import { DescriptionComponent } from './components/description/description.component';
 import { DeliveryComponent } from './components/delivery/delivery.component';
-import { BankCardsComponent } from './components/account/bank-cards/bank-cards.component';
-import { ConnectionComponent } from './components/account/connection/connection.component';
-import { OrdersComponent } from './components/account/orders/orders.component';
-import { AddressesComponent } from './components/account/addresses/addresses.component';
 import { NavigComponent } from './components/navig/navig.component';
 import { Footer2Component } from './components/footer2/footer2.component';
 import { AccountComponent } from './components/account/account.component';
@@ -36,6 +32,7 @@ import { environment } from '../environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
 import { provideDatabase,getDatabase } from '@angular/fire/database';
 import { provideStorage, getStorage } from '@angular/fire/storage';
+import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
 // Fonction pour charger les fichiers de traduction
@@ -61,10 +58,6 @@ export function HttpLoaderFactory(http: HttpClient) {
     TitleComponent,
     DescriptionComponent,
     DeliveryComponent,
-    BankCardsComponent,
-    ConnectionComponent,
-    OrdersComponent,
-    AddressesComponent,
     NavigComponent,
     Footer2Component,
     AccountComponent,
@@ -95,6 +88,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
     provideDatabase(() => getDatabase()),
+    provideAuth(() => getAuth()),
     ReactiveFormsModule,
   ],
   providers: [

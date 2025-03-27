@@ -4,11 +4,12 @@
 
         </div>
         <div class="liste">
-            <div class="case" *ngFor="let plante of plantes">
-                <img [src]="'assets/plantes/' + plante.image" alt="plante">
+            <div class="case" *ngFor="let plante of plantes" (click)="navig(plante)">
+                <div class="vendu" *ngIf="!plante.dispo">EN RUPTURE</div>
+                <img src="assets/icons/coeur.svg" alt="coeur">
+                <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante">
                 <div class="genre">{{ plante.genre | uppercase }} <div>
                 <div class="espece">{{ plante.espece }}</div>
-                <!--<div class="dispo">{{ plante.dispo ? 'en stock' : 'en rupture de stock' }}</div>-->
                 <div class="prix">€ {{ plante.prix }}</div>
             </div>
         </div>

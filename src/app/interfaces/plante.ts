@@ -1,10 +1,16 @@
 export interface Plante {
+    image: string;
     genre: string;
     espece: string;
-    diametre: number;
-    hauteur?: number;
-    image: string;
-    dispo: boolean;
     prix: number;
+    dispo: number;
+    diametre?: number;
+    hauteur?: number;
+}
+
+export interface ObjetPanier {
+    plante : Plante,
+    qte: number,
+    soustotal: number
 }
 
