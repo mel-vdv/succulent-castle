@@ -40,8 +40,6 @@ export class ShoppingCartComponent implements OnInit {
     const uid = this.getUid();
     this.panier?.then(p => {
       p.splice(index, 1);
-      console.log('p',p);
-      console.log('uid', uid);
       // Rafraîchir la promesse pour mettre à jour dans le template si besoin :
       this.panier = Promise.resolve([...p]);
       this.crud.updatePanier(uid, p);

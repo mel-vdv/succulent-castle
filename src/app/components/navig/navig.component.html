@@ -23,8 +23,8 @@
         </div>
 
         <div class="droite">
-            <div routerLink="/favorites">
-                <img src="assets/icons/coeur.svg" alt="icons">
+            <div routerLink="/favorites" *ngIf="!!user">
+                <img src="assets/icons/coeur-pink.svg" alt="icons">
             </div>
             <div routerLink="/shopping-cart">
                 <img src="assets/icons/cart.svg" alt="icons">

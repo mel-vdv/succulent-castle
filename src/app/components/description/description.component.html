@@ -1,7 +1,10 @@
 <div class="container">
     <div class="description">
         <div class="photo">
-            <div class="main"><img [src]="'assets/PHOTOS SUCCULENTES/'+ plante.image" alt="image de la plante"></div>
+            <div class="main">
+                <img [src]="'assets/icons/coeur-'+ couleur +'.svg'" alt="coeur" (click)="toogleCoeur()">
+                <img [src]="'assets/PHOTOS SUCCULENTES/'+ plante.image" alt="image de la plante">
+            </div>
             <div class="carroussel"></div>
         </div>
         <div class="buybox">
@@ -10,7 +13,7 @@
                 <div class="esp">{{plante.espece | titlecase }}</div>
             </div>
             <div class="tarif">
-                {{plante.prix}} € EUR
+                {{plante.prix | virgule }} € EUR
                 <div class="tva tiny">{{ 'taxes-frais' | translate }}</div>
             </div>
             <div class="qte">

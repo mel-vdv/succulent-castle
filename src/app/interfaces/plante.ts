@@ -6,6 +6,7 @@ export interface Plante {
     dispo: number;
     diametre?: number;
     hauteur?: number;
+    coeur: string;
 }
 
 export interface ObjetPanier {

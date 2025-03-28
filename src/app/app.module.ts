@@ -41,6 +41,7 @@ import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
 import { CgvComponent } from './components/cgv/cgv.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { VirgulePipe } from './pipes/virgule.pipe';
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/trad/', '.json');
 }
@@ -72,7 +73,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     ContactComponent,
     AdvicesComponent,
     CgvComponent,
-    FavoritesComponent
+    FavoritesComponent,
+    VirgulePipe
   ],
   imports: [
     BrowserModule,

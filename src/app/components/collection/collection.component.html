@@ -4,23 +4,14 @@
 
         </div>
         <div class="liste">
-            <div class="case" *ngFor="let plante of plantes" (click)="navig(plante)">
+            <div class="case" *ngFor="let plante of plantes; let i = index" >
                 <div class="vendu" *ngIf="!plante.dispo">EN RUPTURE</div>
-                <img src="assets/icons/coeur.svg" alt="coeur">
-                <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante">
+                <img [src]="'assets/icons/coeur-'+ plante.coeur +'.svg'" alt="coeur" (click)="toogleFav(plante.image, plante.coeur, i)">
+                <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante" (click)="navig(plante)">
                 <div class="genre">{{ plante.genre | uppercase }} <div>
                 <div class="espece">{{ plante.espece }}</div>
-                <div class="prix">€ {{ plante.prix }}</div>
+                <div class="prix">€ {{ plante.prix | virgule }}</div>
             </div>
         </div>
     </div>
 </div>
-
-<!--
-    "filtrer-par-genre": "Filtrer par genre",
-    "all": "tous",
-    "ordonner-par": "Ordonner par",
-    "prix-croissant": "prix croissant",
-    "prix-decroissant": "prix décroissant",
-    "produits": "produits",
--->

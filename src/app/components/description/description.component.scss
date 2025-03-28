@@ -1,22 +1,40 @@
 .container {
     .description {
         width: min(100vw, 1400px);
-        min-height: calc(100vh - 540px);
+        min-height: calc(100vh - 530px);
         display: flex;
-        justify-content: center;
+        justify-content: center; 
+        @media screen and(max-width: 700px) {
+            flex-direction: column;
+        }
 
         .photo {
             width: 50%;
+            @media screen and(max-width: 700px) {
+                width: 90%;
+                margin: auto;
+            }
             .main {
-                img {
+                position: relative;
+                img[alt='image de la plante'] {
                     width: 100%;
                     height: auto;
                     border-radius: 20px; box-sizing: border-box;
                 }
-            }
+                img[alt='coeur'] {
+                    height: auto;
+                    width: 7%;
+                    position: absolute;
+                    top: 2%;
+                    right: 2%;
+                    z-index: 3;
+                }
+            } 
         }
         .buybox {
-            width: 50%;
+            width: 50%; 
+            @media screen and(max-width: 700px) {
+            }
             padding: 20px; box-sizing: border-box;
 
             >div {
@@ -46,6 +64,10 @@
                 &:hover {
                     font-weight: bolder;
                 }
+                @media screen and(max-width: 700px) {
+                    display: block;
+                    margin: auto;
+                }
             }
             .share {
                 display: flex; align-items: center;
@@ -61,6 +83,9 @@
                     img {
                         transform: scale(1.05);
                     }
+                }
+                @media screen and(max-width: 700px) {
+                    margin: auto;
                 }
             }
         }
