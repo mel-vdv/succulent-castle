@@ -23,21 +23,24 @@
         </div>
 
         <div class="droite">
-            <div routerLink="/favorites" *ngIf="!!user">
+            <div routerLink="/favorites" *ngIf="!!uid">
                 <img src="assets/icons/coeur-pink.svg" alt="icons">
             </div>
-            <div routerLink="/shopping-cart">
+            <div routerLink="/shopping-cart" class="cart">
+                <div class="panierLength" *ngIf="panierLength">
+                    {{panierLength}}
+                </div>
                 <img src="assets/icons/cart.svg" alt="icons">
             </div>
-            <div routerLink="/account" *ngIf="!!user">
+            <div routerLink="/account" *ngIf="!!uid">
                 <img src="assets/icons/profil.svg" alt="icons">
                 {{"account"|translate}}
             </div>
-            <div *ngIf="!!user" (click)="deco()">
+            <div *ngIf="!!uid">
                 <img src="assets/icons/exit.svg" alt="icons">
                 {{"déco"|translate}}
             </div>
-            <div (click)="co()" *ngIf="!user">
+            <div  *ngIf="!uid">
                 <img src="assets/icons/profil.svg" alt="icons">
                 Me connecter
             </div>
@@ -45,16 +48,3 @@
         </div>
     </div>
 </div>
-
-<!--
-    "home": "Accueil",
-    "shop": "Boutique",
-    "collection": "Collection",
-    "gift": "Idées cadeaux",
-    "faq": "FAQ",
-    "contact": "Contact",
-    "advices": "Entretien et Culture",
-    "account": "Mon compte",
-    "connexion": "Connexion",
-    "déco": "Déconnecter",
--->

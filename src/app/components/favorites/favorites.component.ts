@@ -29,7 +29,7 @@ export class FavoritesComponent implements OnInit {
 
   //get uid :
   getUid() {
-    return localStorage.getItem('uid');
+    return "KGjzPIk253ecTKoyjWZcLqBJj9i2";// localStorage.getItem('uid');
   }
 
   //FAVORIS :
@@ -45,7 +45,7 @@ export class FavoritesComponent implements OnInit {
   }
 
   removeFav(fav: string) {
-    const uid = localStorage.getItem('uid');
+    const uid ="KGjzPIk253ecTKoyjWZcLqBJj9i2";// localStorage.getItem('uid');
     if(!!uid) {
       // rafraichir la promesse favoris de la page :
       this.plantes = this.plantes.filter((pl: Plante) => pl.image !== fav);

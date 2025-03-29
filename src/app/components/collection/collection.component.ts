@@ -45,7 +45,7 @@ export class CollectionComponent implements OnInit {
 
   // user ? 
   getUid() {
-     return localStorage.getItem('uid') ?? undefined;
+     return "KGjzPIk253ecTKoyjWZcLqBJj9i2"; // localStorage.getItem('uid') ?? undefined;
   }
 
   //vers la fiche description : 
@@ -67,7 +67,7 @@ export class CollectionComponent implements OnInit {
     this.crud.removeFavori(uid,fav);
   }
   toogleFav(fav: string, coeur: string, i: number) {
-    const uid = localStorage.getItem('uid');
+    const uid = "KGjzPIk253ecTKoyjWZcLqBJj9i2"; // localStorage.getItem('uid');
     if(!!uid) {
       if(coeur === 'blanc') {
         //màj immédiate : 

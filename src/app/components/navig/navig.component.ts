@@ -1,6 +1,9 @@
+import { FicheService } from 'src/app/services/fiche.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { AuthService } from 'src/app/services/auth.service';
+import { CrudsService } from 'src/app/services/cruds.service';
+import { Observable, Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-navig',
@@ -8,20 +11,28 @@ import { AuthService } from 'src/app/services/auth.service';
   styleUrls: ['./navig.component.scss']
 })
 export class NavigComponent implements OnInit {
+  //user?: User | undefined | null;
+  uid?: string | null;
+
+  panierLength: number = 0;
+ // panierSub?: Subscription;
 
   constructor(
-    private authServ : AuthService
+    private authServ : AuthService,
+    private crud: CrudsService,
+    private ficheServ: FicheService
   ) { }
 
-  user?: User | undefined | null;
+
   ngOnInit(): void {
-    this.getUser();
+    this.uid = this.getUid();
   }
 
-  getUser() {
-    this.authServ.user$.subscribe((result) => this.user = result);
+  getUid() {
+    return "KGjzPIk253ecTKoyjWZcLqBJj9i2"; // localStorage.getItem('uid');
   }
 
+  /*
   deco() {
     this.authServ.logout();
   }
@@ -32,5 +43,6 @@ export class NavigComponent implements OnInit {
       }
     )
   }
+    */
 
 }

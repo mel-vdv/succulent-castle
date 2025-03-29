@@ -43,7 +43,7 @@ export class DescriptionComponent implements OnInit {
   }
 
   getUid() {
-    return localStorage.getItem('uid');
+    return "KGjzPIk253ecTKoyjWZcLqBJj9i2"; //localStorage.getItem('uid');
   }
 
   setQte(nb: number) {
@@ -75,7 +75,7 @@ export class DescriptionComponent implements OnInit {
   }
 
   addPanier() {
-    const uid = localStorage.getItem('uid') ?? null;
+    const uid = "KGjzPIk253ecTKoyjWZcLqBJj9i2";// localStorage.getItem('uid') ?? null;
     if(!! uid) {
       const objetPanier = {
         plante: this.plante, qte: Number(this.qte), soustotal: Number(this.qte * this.plante.prix)

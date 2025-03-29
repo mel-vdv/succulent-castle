@@ -25,13 +25,18 @@ import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.
 import { ContactComponent } from './components/contact/contact.component';
 import { AdvicesComponent } from './components/advices/advices.component';
 import { PaymentComponent } from './components/payment/payment.component';
+import { CgvComponent } from './components/cgv/cgv.component';
+import { FavoritesComponent } from './components/favorites/favorites.component';
+//PIPES :
+import { VirgulePipe } from './pipes/virgule.pipe';
+
 //AUTRE
 import { ReactiveFormsModule } from '@angular/forms';
 //firebase MODULAIRE
 import { environment } from '../environments/environment';
 import { initializeApp,provideFirebaseApp } from '@angular/fire/app';
-import { provideDatabase,getDatabase } from '@angular/fire/database';
-import { provideStorage, getStorage } from '@angular/fire/storage';
+//import { provideDatabase,getDatabase } from '@angular/fire/database';
+//import { provideStorage, getStorage } from '@angular/fire/storage';
 import { provideAuth, getAuth } from '@angular/fire/auth';
 import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 
@@ -39,9 +44,7 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { CgvComponent } from './components/cgv/cgv.component';
-import { FavoritesComponent } from './components/favorites/favorites.component';
-import { VirgulePipe } from './pipes/virgule.pipe';
+
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/trad/', '.json');
 }
@@ -89,7 +92,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     }),
     provideFirebaseApp(() => initializeApp(environment.firebase)),
     provideFirestore(() => getFirestore()),
-    provideDatabase(() => getDatabase()),
+    //provideDatabase(() => getDatabase()),
     provideAuth(() => getAuth()),
     ReactiveFormsModule,
   ],

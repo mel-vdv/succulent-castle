@@ -1,7 +1,8 @@
 import { CrudsService } from 'src/app/services/cruds.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, Pipe } from '@angular/core';
 import { ObjetPanier } from 'src/app/interfaces/plante';
 import { Router } from '@angular/router';
+import { Observable, take } from 'rxjs';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -10,8 +11,8 @@ import { Router } from '@angular/router';
 })
 export class ShoppingCartComponent implements OnInit {
 
-  panier?: Promise<ObjetPanier[]>;
-  uid?: string;
+  panier$!: Observable<any> | null;
+  uid!: string | null;
 
   constructor(
     private crud: CrudsService,
@@ -19,41 +20,28 @@ export class ShoppingCartComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.uid = localStorage.getItem('uid') ?? undefined;
-    this.getPanier();
+    this.uid ="KGjzPIk253ecTKoyjWZcLqBJj9i2";// localStorage.getItem('uid');
+    this.panier$ = !!this.uid ? this.crud.getPanier(this.uid!) : null;
+    console.log('on init panier', this.panier$);
   }
 
   getUid() {
-    return this.uid ?? localStorage.getItem('uid')!;
+    return"KGjzPIk253ecTKoyjWZcLqBJj9i2";// this.uid ?? localStorage.getItem('uid');
   }
 
-  setQte(nb: number, index: number){
-    this.panier?.then(p => {
-        p[index].qte += nb;
-        // Rafraîchir la promesse pour mettre à jour dans le template si besoin :
-        this.panier = Promise.resolve([...p]);
+  setQte(nb: number, i: number){
+    this.panier$!
+    .pipe(take(1))
+    .subscribe(p => {
+      if (p && p[i]) {
+        p[i].qte += nb;
         this.crud.updatePanier(this.uid!, p);
-    });
+      }
+      
+    })
   }
 
-  trash(index:number) {
-    const uid = this.getUid();
-    this.panier?.then(p => {
-      p.splice(index, 1);
-      // Rafraîchir la promesse pour mettre à jour dans le template si besoin :
-      this.panier = Promise.resolve([...p]);
-      this.crud.updatePanier(uid, p);
-  });
+  trash(objetPanier: ObjetPanier) {
+    this.crud.removePanier(this.uid!, objetPanier);
   }
-
-  getPanier(): void {
-    if(!!this.uid) {
-      this.panier = this.crud.getPanier(this.uid);
-    }
-    else {
-      this.router.navigate(['/account']);
-    }
-  }
-
-
 }

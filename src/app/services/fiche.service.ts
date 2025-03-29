@@ -9,6 +9,7 @@ export class FicheService {
   constructor() { }
 
   plante?: Plante;
+  panierLength: number = 0;
 
   setPlante(plante: Plante) {
     this.plante = plante;

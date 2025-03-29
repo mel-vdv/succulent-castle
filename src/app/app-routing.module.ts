@@ -18,7 +18,7 @@ import { CgvComponent } from './components/cgv/cgv.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 
 const routes: Routes = [
-  { path: "", component: PaymentComponent},
+  { path: "", component: HomeComponent},
   { path: "home", component: HomeComponent},
   { path: "collection", component: CollectionComponent},
   { path: "description/:id", component: DescriptionComponent},

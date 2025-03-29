@@ -2,7 +2,6 @@ import { CrudsService } from 'src/app/services/cruds.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from 'firebase/auth';
 import { AuthService } from 'src/app/services/auth.service';
-import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-account',

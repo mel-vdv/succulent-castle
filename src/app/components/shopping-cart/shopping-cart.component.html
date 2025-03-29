@@ -1,6 +1,6 @@
 <div class="container">
-    <div class="shoppingCart" *ngIf="(panier | async) as resolvedPanier">
-        <div *ngIf="resolvedPanier.length">
+    <div class="shoppingCart" *ngIf="panier$ | async">
+        <div *ngIf="(panier$|async)?.length">
             <div class="header">
                 <h1>{{ "shopping-carth1" | translate }}</h1>
                 <div routerLink="/collection">
@@ -15,7 +15,7 @@
             </div>
 
             <div class="produits">
-                <div class="produit" *ngFor="let produit of panier | async; let i = index;">
+                <div class="produit" *ngFor="let produit of panier$ | async; let i = index;">
                     <div class="image">
                         <img [src]="'assets/PHOTOS SUCCULENTES/'+ produit.plante.image" alt="photo plante">
                         {{produit.plante.genre | uppercase}} {{produit.plante.espece | titlecase}}
@@ -26,7 +26,7 @@
                             <div>{{produit.qte}}</div>
                             <div class="plus" (click)="setQte(1,i)">+</div>
                         </div>
-                        <div class="trash" (click)="trash(i)">
+                        <div class="trash" (click)="trash(produit)">
                             <img src="assets/icons/trash.svg" alt="trash">
                         </div>
                     </div>
@@ -46,19 +46,8 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="!resolvedPanier.length">
+        <div *ngIf="!(panier$|async)?.length">
             PANIER VIDE
         </div>
     </div>
 </div>
-
-
-<!--
-   "shopping-carth1": "Votre panier",
-    "poursuivre": "Continuer vos achats",
-    "produit":"Produit",
-    "montant":"Montant",
-    "total":"Total",
-    "frais-port":"frais de port calculés à la caisse",
-    "payer":"Régler",
--->
