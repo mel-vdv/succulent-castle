@@ -139,6 +139,7 @@
     
     "no-favo": "Geen favorieten",
     "no-histo": "Geen bestelgeschiedenis",
+    "no-panier": "Panier vide",
     
     "success-order-notif": "Je bestelling is succesvol geplaatst. <br> Bedankt! We verzenden ze zo snel mogelijk.",
     "nl-notif": "Bedankt voor je inschrijving op de nieuwsbrief. <br> De volgende updates van SUCCULENT CASTLE worden verzonden naar {{email}}."

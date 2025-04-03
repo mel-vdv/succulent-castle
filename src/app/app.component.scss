@@ -7,8 +7,8 @@
 
 body {
     width: 100vw;
-    height: 100vh;
-    position: absolute;
+    height: calc(var(--vh, 1vh) * 100);//100vh;
+    position: fixed;//absolute;
     top: 0;
     left: 0;
     padding: 0;
@@ -19,7 +19,7 @@ body {
     font-size: 24px;
     font-family: 'fredoka', sans-serif;
     @media screen and (max-width: 700px) {
-        font-size: 20px;
+        font-size: 18px;
     }
 }
 ::-webkit-scrollbar {

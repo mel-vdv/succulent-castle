@@ -1,7 +1,6 @@
 .container {
     background-color: #363333;
     color: white;
-    font-size: 20px;
 
     .footer {
         display: flex;
@@ -40,6 +39,7 @@
             .un {
                 box-sizing: border-box;
                 width: 100%;
+                border-bottom: white 1px solid;
             }
         }
     }

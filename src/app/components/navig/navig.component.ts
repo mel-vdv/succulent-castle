@@ -42,10 +42,10 @@ export class NavigComponent implements OnInit {
   }
 
   deco() {
-    this.authServ.logout().subscribe(() => {});
+    this.authServ.logout().subscribe(() => console.log('deco'));
   }
 
   co() {
-    this.authServ.loginWithGoogle();
+    this.authServ.loginWithGoogle().subscribe(()=> console.log('co'));
   }
 }

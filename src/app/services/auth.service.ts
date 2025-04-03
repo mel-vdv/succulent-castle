@@ -7,7 +7,9 @@ import { from, Observable } from 'rxjs';
 })
 export class AuthService {
 
-  constructor(private auth: Auth) {}
+  user$!: Observable<User | null>;
+
+  constructor(private auth: Auth) {  this.user$ = user(this.auth as any);}
   
 
   loginWithGoogle(): Observable<any> {
@@ -18,5 +20,4 @@ export class AuthService {
   logout(): Observable<void> {
     return from(signOut(this.auth));
   }
-  user$: Observable<User | null> = user(this.auth as any);
 }
