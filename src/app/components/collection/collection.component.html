@@ -1,0 +1,33 @@
+<div class="container">
+    <div class="collection">
+        <div class="filtre">
+            <div class="par-genre">
+                Filtrer par genre :
+                <select [(ngModel)]="genreChoisi" (change)="triage()">
+                    <option *ngFor="let genre of genres" [value]="genre">{{genre | titlecase }} </option>
+                </select>
+
+            </div>
+
+            <div class="tri">
+                Trier par :
+                <select [(ngModel)]="triChoisi" (change)="triage()">
+                    <option *ngFor="let tri of tris" [value]="tri">{{tri}}</option>
+                </select>
+            </div>
+
+        </div>
+        <div class="liste">
+            <div class="case" *ngFor="let plante of plantes; let i = index" >
+                <div class="vendu" *ngIf="!plante.dispo">EN RUPTURE</div>
+                <img [src]="'assets/icons/coeur-'+ plante.coeur +'.svg'" alt="coeur" (click)="toogleFav(plante.image, plante.coeur, i)">
+                <div class="cadre">
+                    <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante" (click)="navig(plante)">
+                </div>
+                <div class="genre">{{ plante.genre | uppercase }} <div>
+                <div class="espece">{{ plante.espece | titlecase }}</div>
+                <div class="prix">€ {{ plante.prix | virgule }}</div>
+            </div>
+        </div>
+    </div>
+</div>

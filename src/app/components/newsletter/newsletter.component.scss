@@ -1,0 +1,50 @@
+.container {
+        background-color: rgba(0,0,0,0.07);
+        box-sizing: border-box;
+    .newsletter {
+        padding: 20px;
+        font-size: 20px;
+        div {
+            margin: 10px 0;
+        }
+        box-sizing: border-box;
+        form {
+            .rubrik {
+                input {
+                    all: unset;
+                    background-color: white;
+                    padding: 15px;
+                    border-radius: 5px;
+                    margin-left: 15px;
+                }
+            }
+            .error {
+                color: rgb(216,16,86);
+            }
+            .acceptTerms {
+                input {
+                    accent-color: rgb(216,16,86);
+                    height: 20px;
+                    width: 20px;
+                    position: relative;
+                    top: 3px;
+                }
+            } 
+            button {
+                all: unset;
+                border: 1px solid rgb(216,16,86);
+                color: rgb(216,16,86);
+                border-radius: 20px;
+                padding: 10px 20px;
+                
+                &:not(.invalid) {
+                    background-color: white;
+                }
+                &:hover:not(.invalid) {
+                    color: white;
+                    background-color: rgb(216,16,86);
+                }
+            }
+        }
+    }
+}

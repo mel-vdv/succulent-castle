@@ -1,0 +1,24 @@
+<div class="orders">
+
+    <h1>{{'histo-commandes' | translate }}</h1>
+    <div class="liste" *ngIf="orders?.length else noHisto">
+        <div class="case" *ngFor="let ord of orders; let i = index;">
+            {{ord.etat}}
+            {{ord.date}}
+            Total  € {{ord.total | virgule}} EUR
+            <div *ngFor="let ligne of ord.panier">
+                <div>
+                    <img [src]="'assets/PHOTOS SUCCULENTES/' + ligne.plante.image" alt="miniature">
+                </div>
+                <div>{{ligne.plante.genre | uppercase}} {{ligne.plante.espece | titlecase}} </div>
+                <div>{{ligne.plante.prix}} x {{ligne.qte}} = {{ligne.soustotal}} €</div>
+            </div>
+        </div>
+    </div>
+
+    <ng-template class="vide" #noHisto>
+        <div class="vide">
+            {{"no-histo" | translate | uppercase}}
+        </div>
+    </ng-template>
+</div>

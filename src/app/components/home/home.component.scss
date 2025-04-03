@@ -1,0 +1,14 @@
+.container {
+        display: flex; align-items: center; justify-content: center;
+        min-height: calc(100vh - 530px);
+        box-sizing: border-box;
+
+        .home {
+                padding: 10px; box-sizing: border-box;
+        }
+
+        img[alt="sticker"] {
+                float: right;
+                height: min(25vw, 250px);
+        }
+}

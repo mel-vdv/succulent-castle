@@ -1,0 +1,45 @@
+.container {
+    min-height: calc(100vh - 530px);
+    box-sizing: border-box;
+    .account {
+        button {
+            all: unset;
+            color: rgb(216,16,86);
+            border: 1px solid rgb(216,16,86);
+            padding: 5px 15px;
+            border-radius: 25px;
+            margin-left: 50px;
+            display: block;
+            &:hover {
+                color: white;
+                background-color: rgb(216,16,86);
+            }
+        }
+        .welkom {
+            text-align: center;
+            padding: 20px;
+        }
+        .details {
+            display: flex;
+            width: 100%;
+            app-orders, app-delivery {
+                width: 50%;
+            }   
+            app-orders {
+            }
+        }
+        .noLoggin {
+            display: flex; align-items: center; justify-content: center;
+            height: calc(100vh - 530px);
+            button {
+                padding: 20px;
+                font-size: 30px;
+                display: flex; align-items: center; justify-content: center;
+                img {
+                    height: 30px;
+                    margin-left: 30px;
+                }
+            }
+        }
+    }
+}

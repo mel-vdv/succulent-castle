@@ -1,0 +1,76 @@
+
+    <div class="delivery">
+        <h1>Livraison</h1>
+        <div class="adresse" *ngIf="edit !== true && !!address2">
+            {{address2.prenom |titlecase }} {{address2.nom | uppercase}} <br>
+            {{address2.adres}} <br>
+            {{address2.compl}} <br>
+            {{address2.cp}} {{address2.ville | uppercase}} <br>
+            {{address2.country | uppercase}} <br>
+            <button (click)="edit = true">{{'modify-address' | translate }}</button>
+        </div>
+        <form [formGroup]="f" (ngSubmit)="onSubmit()" *ngIf="edit === true || !address2">
+            <div class="rubrik">
+                <label for="prenom">{{ 'prenom' | translate }}*</label>
+                <input type="text" id="prenom" formControlName="prenom">
+            </div>
+            <div class="error" *ngIf="f.get('prenom')?.invalid && f.get('prenom')?.touched">
+                <small *ngIf="f.get('prenom')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="nom">{{ 'nom' | translate }}*</label>
+                <input type="text" id="nom" formControlName="nom">
+            </div>
+            <div class="error" *ngIf="f.get('nom')?.invalid && f.get('nom')?.touched">
+                <small *ngIf="f.get('nom')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="adres">{{ 'adres' | translate }}*</label>
+                <input type="text" id="adres" formControlName="adres">
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="compl">{{ 'compl-adresse' | translate }}</label>
+                <input type="text" id="compl" formControlName="compl">
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="cp">{{ 'cp' | translate }}*</label>
+                <input type="text" id="cp" formControlName="cp">
+            </div>
+            <div class="error" *ngIf="f.get('cp')?.invalid && f.get('cp')?.touched">
+                <small *ngIf="f.get('cp')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="ville">{{ 'ville' | translate }}*</label>
+                <input type="text" id="ville" formControlName="ville">
+            </div>
+            <div class="error" *ngIf="f.get('ville')?.invalid && f.get('ville')?.touched">
+                <small *ngIf="f.get('ville')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="country">{{ 'country' | translate }}*</label>
+                <input type="text" id="country" formControlName="country">
+            </div>
+            <div class="error" *ngIf="f.get('country')?.invalid && f.get('country')?.touched">
+                <small *ngIf="f.get('country')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div class="rubrik">
+                <label for="tel">{{ 'tel' | translate }}*</label>
+                <input type="text" id="tel" formControlName="tel">
+            </div>
+            <div class="error" *ngIf="f.get('tel')?.invalid && f.get('tel')?.touched">
+                <small *ngIf="f.get('tel')?.errors?.['required']">{{ 'required' | translate }}.</small>
+            </div>
+            <!-------------->
+            <div>
+                <div class="tiny">{{"champs-oblig"| translate }}</div>
+            </div>
+            <button type="submit" [disabled]="f.invalid">{{"save" | translate }}</button>
+        </form>
+    </div>

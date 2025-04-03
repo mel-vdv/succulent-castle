@@ -1,0 +1,27 @@
+<div class="container">
+    <div class="faq">
+        <h1>
+            {{ "faqh1" | translate }}
+        </h1>
+        <div *ngFor="let theme of faq; let x = index;" class="bloc-theme">
+            <h2 class="theme">
+                {{ theme[0] | translate }}
+            </h2>
+            <div *ngFor="let qr of theme[1]; let y = index;" class="qr">
+                <div class="q">
+                    {{ qr[0] | translate }}
+                    <div *ngIf="choix !== qr[1]" class="plus" (click)="choisir('r'+x+'-'+y)">+</div>
+                    <div *ngIf="choix === qr[1]" class="plus" (click)="choisir('')">-</div> 
+                </div>
+                <div class="r" *ngIf="choix === qr[1] ">
+                    {{ qr[1] | translate }}
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!--
+    "faqh1":"Questions fréquemment posées",
+    "faq-p":"Consultez la FAQ, si vous avez encore besoin d'aide, contactez-nous au",
+-->

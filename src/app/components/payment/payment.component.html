@@ -1,0 +1,50 @@
+<div class="container">
+    <div class="payment" *ngIf="!!user">
+        <div class="top">
+            <div>
+                {{"account-h1" | translate }} : {{user.email}}
+            </div>
+            <button (click)="goPanier()">
+                {{ "back-panier" | translate }}
+            </button>
+        </div>
+        <div>
+            <div class="livr-paym">
+                <div class="livr">
+                    <app-delivery [address2]="address"></app-delivery>
+                </div>
+                <div class="stripe">
+                    <h1>{{ "paymenth1" | translate }}</h1>
+                    <p>{{ "payment-p" | translate }}</p>
+                    <button (click)="goStripe()">{{'payer'|translate}}</button>
+                </div>
+            </div>
+            <div class="recap">
+                <div class="panier" *ngFor="let p of panier$ | async">
+                    <img [src] ="'assets/PHOTOS SUCCULENTES/' + p.plante.image" alt="miniature">
+                    <div class="names">{{p.plante.genre}} {{p.plante.espece | titlecase}} x {{p.qte}} </div>
+                </div>
+                <div class="code">
+                    <input type="text" [(ngModel)]="bonReduc"
+                    [placeholder]="'bon-gift' | translate">
+                    <button 
+                    (click)="applyReduc()">{{ 'apply' | translate }}</button>
+                </div>
+                <div class="soustot">
+                    {{'sous-tot' | translate :  {n : panierLength } }} : {{soustot | virgule}} €
+                </div>
+                <div class="expedition tiny">
+                    {{ 'expedition' | translate }} 
+                    <button (click)="infoExped()">?</button>
+                    {{fraisLivr | virgule }} €
+                </div>
+                <div class="total-final">
+                    TOTAL : EUR {{tot | virgule}} €
+                </div>
+                <div class="tva tiny">
+                    ({{ "tva-incluse" | translate : {n: tva } }})
+                </div>
+            </div> 
+        </div>
+    </div>
+</div>

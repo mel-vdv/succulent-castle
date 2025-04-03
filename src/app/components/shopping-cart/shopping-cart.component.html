@@ -1,0 +1,53 @@
+<div class="container">
+    <div class="shoppingCart" *ngIf="panier$ | async">
+        <div *ngIf="(panier$|async)?.length">
+            <div class="header">
+                <h1>{{ "shopping-carth1" | translate }}</h1>
+                <div routerLink="/collection">
+                    {{ "poursuivre" | translate }}
+                </div>
+            </div>
+
+            <div class="titres">
+                <div class="prod">{{"produit"|translate}}</div>
+                <div class="qte">{{"qte"|translate}}</div>
+                <div class="tot">{{"total"|translate}}</div>
+            </div>
+
+            <div class="produits">
+                <div class="produit" *ngFor="let produit of panier$ | async; let i = index;">
+                    <div class="image">
+                        <img [src]="'assets/PHOTOS SUCCULENTES/'+ produit.plante.image" alt="photo plante">
+                        {{produit.plante.genre | uppercase}} {{produit.plante.espece | titlecase}}
+                    </div>
+                    <div class="qte">
+                        <div class="setQte">
+                            <div class="plus" [class.grise]="produit.qte < 2" (click)="setQte(-1,i)">-</div>
+                            <div>{{produit.qte}}</div>
+                            <div class="plus" (click)="setQte(1,i)">+</div>
+                        </div>
+                        <div class="trash" (click)="trash(produit)">
+                            <img src="assets/icons/trash.svg" alt="trash">
+                        </div>
+                    </div>
+                    <div class="tot">
+                        {{produit.soustotal}} €
+                    </div>
+                </div>
+            </div>
+
+            <div class="totaux">
+                <div>Total <sup>TTC</sup> {{total}} €</div>
+                <div class="tiny">
+                    {{"frais-port"|translate}}
+                </div>
+                <div class="buybutton" (click)="goPayment()">
+                    {{"payer"|translate|uppercase}}
+                </div>
+            </div>
+        </div>
+        <div *ngIf="!(panier$|async)?.length">
+            PANIER VIDE
+        </div>
+    </div>
+</div>

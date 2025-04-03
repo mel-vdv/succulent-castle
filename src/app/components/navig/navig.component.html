@@ -1,0 +1,54 @@
+<div class="container">
+    <div class="navig">
+
+        <div class="gauche">
+            <div routerLink="/home">
+                {{"home"|translate}}
+            </div>
+            <div routerLink="/collection">
+                {{"shop"|translate}}
+            </div>
+            <div routerLink="/gift">
+                {{"gift"|translate}}
+            </div>
+            <div routerLink="/faq">
+                FAQ
+            </div>
+            <div routerLink="/advices">
+                {{"advices"|translate}}
+            </div>
+            <div routerLink="/contact">
+                {{"contact"|translate}}
+            </div>
+        </div>
+
+        <div class="droite">
+            <div routerLink="/favorites">
+                <img src="assets/icons/coeur-blanc.svg" alt="icons">
+            </div>
+
+            <div routerLink="/shopping-cart" class="cart">
+                <div class="panierLength" *ngIf="panierLength">
+                    {{panierLength}}
+                </div>
+                <img src="assets/icons/cart.svg" alt="icons">
+            </div>
+
+            <div routerLink="/account" *ngIf="!!user">
+                <img src="assets/icons/profil.svg" alt="icons">
+                {{"account"|translate}}
+            </div>
+
+            <div (click)="deco()" *ngIf="!!user">
+                <img src="assets/icons/exit.svg" alt="icons">
+                {{"déco"|translate}}
+            </div>
+
+            <div (click)="co()" *ngIf="!user">
+                <img src="assets/icons/profil.svg" alt="icons">
+                Me connecter
+            </div>
+
+        </div>
+    </div>
+</div>

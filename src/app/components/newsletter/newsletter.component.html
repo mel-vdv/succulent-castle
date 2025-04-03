@@ -1,0 +1,29 @@
+<div class="container">
+    <div class="newsletter">
+
+        <div class="speech" *ngIf="!notif" [innerHTML]="'nl-p' | translate"></div>
+
+        <form [formGroup]="f" (ngSubmit)="onSubmit()" *ngIf="!notif">
+            <div class="rubrik">
+                <label for="email">{{ "email" | translate }}</label>
+                <input type="email" id="email" formControlName="email">
+            </div>
+            <div *ngIf="f.get('email')?.invalid && f.get('email')?.touched" class="error">
+                <small *ngIf="f.get('email')?.errors?.['required']">{{ 'required' | translate }}</small>
+                <small *ngIf="f.get('email')?.errors?.['email']">{{ 'email-invalide' | translate }}</small>
+            </div>
+            <div class="acceptTerms tiny">
+                <input type="checkbox" formControlName="acceptTerms">
+                {{ 'case-rgpd'  | translate }}
+            </div>
+            <button 
+            type="submit"
+            [class.invalid]="f.invalid"
+            [disabled]="f.invalid">
+                {{ "nl-button" | translate }}
+            </button>
+        </form>
+        
+        <div class="notif" *ngIf="!!notif" [innerHTML]="'nl-notif' | translate: {email : f.get('email')?.value}"></div>
+    </div>
+</div>

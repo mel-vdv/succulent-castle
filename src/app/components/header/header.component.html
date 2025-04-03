@@ -1,0 +1,32 @@
+<div class="container">
+    <div class="header">
+
+        <div class="links">
+            <div (click)="navig('https://www.instagram.com/the_succulent_castle/')">
+                <img src="assets/icons/insta.svg" alt="icons">
+            </div>
+            <div (click)="navig('')">
+                <img src="assets/icons/fb.svg" alt="icons">
+            </div>
+            <div>
+                <a href="mailto: thesucculentcastle@gmail.com" target="_blank" rel="noopener noreferrer"><img src="assets/icons/email.svg" alt="icons"></a>
+            </div>
+            <div *ngIf="isMobile">
+                <a href="tel:+33633732820"><img src="assets/icons/tel.svg" alt="icons"></a>
+            </div>
+            <div *ngIf="!isMobile">
+                <img src="assets/icons/tel.svg" alt="icons" title="+33.6.33.73.28.20">
+            </div>
+        </div>
+
+        <div class="langues">
+            <div (click)="switchLang('en')">EN</div>
+            <div (click)="switchLang('fr')">FR</div>
+            <div (click)="switchLang('nl')">NL</div>
+        </div>
+    </div>
+    
+    <div class="pub">
+        {{ "annonce" | translate }}
+    </div>
+</div>

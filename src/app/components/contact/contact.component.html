@@ -1,0 +1,79 @@
+<div class="container"> 
+    <div class="contact">
+        <div *ngIf="notif ===''" class="speech" [innerHTML]="'speech-contact' | translate"></div>
+        <div *ngIf="!!notif">{{notif}}</div>
+        <form *ngIf="notif === ''" [formGroup]="f" (ngSubmit)="onSubmit()">
+            <h2 class="h2contact">
+                {{ "form-contact" | translate }}</h2>
+            <div>
+                <div class="rubrik">
+                    <label for="nom">{{ "nom" | translate }}*</label>
+                    <input type="text" id="nom" formControlName="firstname">
+                </div>
+                <div *ngIf="f.get('firstname')?.invalid && f.get('firstname')?.touched" class="error">
+                    <small *ngIf="f.get('firstname')?.errors?.['required']">{{ 'required' | translate }}.</small>
+                </div>
+                <div class="rubrik">
+                    <label for="tel">{{ "tel" | translate }} </label>
+                    <input type="tel" id="tel" formControlName="phone">
+                </div>
+                <div class="rubrik">
+                    <label for="email">{{ "email" | translate }}*</label>
+                    <input type="email" id="email" formControlName="email">
+                </div>
+                <div *ngIf="f.get('email')?.invalid && f.get('email')?.touched" class="error">
+                    <small *ngIf="f.get('email')?.errors?.['required']">{{ 'required' | translate }}</small>
+                    <small *ngIf="f.get('email')?.errors?.['email']">{{ 'email-invalide' | translate }}</small>
+                </div>
+            </div>
+            <div>
+                <div class="rubrik">
+                    <label for="objet">{{ "objet" | translate }}  </label>
+                    <input type="text" id="objet" formControlName="objet">
+                </div>
+                <div class="rubrik">
+                    <textarea name="message" id="message" formControlName="message" placeholder="{{ 'message' | translate }}"></textarea>
+                </div>
+                <div *ngIf="f.get('message')?.invalid && f.get('message')?.touched" class="error">
+                    <small *ngIf="f.get('message')?.errors?.['required']">{{ "required" | translate }}.</small>
+                    <small *ngIf="f.get('message')?.errors?.['message']">{{ "trop-court" | translate }}.</small>
+                </div>
+                <div class="asterix">{{ "champs-oblig" | translate }}</div>
+                <div class="acceptTerms">
+                    <input type="checkbox" formControlName="acceptTerms">
+                    {{ 'case-rgpd'  | translate }}
+                </div>
+                <div class="send">
+                    <button type="submit" [class.invalid]="f.invalid" [disabled]="f.invalid">
+                        {{ "envoyer" | translate }}
+                        <img [src]="'../../assets/images/send-'+ (f.invalid ? 'dark' : 'blanc') +'.svg'" alt="send"/>
+                    </button>
+                </div>
+            </div>
+        </form>
+        <div class="reseaux-links">
+            <h2 class="h2contact">
+                {{'sur-les-reseaux' | translate }}
+            </h2>
+            <p>{{ "follow-us" | translate }}</p>
+            <a href="https://www.facebook.com/profile.php?id=61572312565265" target="_blank">
+                <img src="assets/icons/fb.svg" alt="reseaux"> Facebook
+            </a>
+            <a href="https://www.instagram.com/thecooncastle/" target="_blank">
+                <img src="assets/icons/insta.svg" alt="reseaux"> Instagram
+            </a>
+            <br>
+            <h2 class="h2contact">
+                {{"par-tel" | translate}}
+            </h2>
+            <p>{{ 'joignable' | translate }}</p>
+            <p>+33 6 33 73 28 20</p>
+            <p>+32 474 80 04 53</p>
+            <h2 class="h2contact">
+                {{"par-email" | translate}}
+            </h2>
+            <p>{{"nous-ecrire" | translate}}</p> 
+            <a target="_blank" href="mailto:thecooncastle@gmail.com">thesucculentcastle&#64;gmail.com</a> 
+        </div>
+    </div>
+</div>

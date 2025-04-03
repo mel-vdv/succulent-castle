@@ -1,0 +1,41 @@
+<div class="container">
+    <div class="footer">
+        <div class="un">
+            <div><img src="assets/images/title-small.png" alt="title"></div>
+            <div>{{"activite" | translate }}</div>
+        </div>
+
+        <div class="deux">
+            <div class="main">{{"follow-us" | translate }}</div>
+            <div class="links">
+                <div (click)="navig('https://www.instagram.com/the_succulent_castle/')">
+                    <img src="assets/icons/insta.svg" alt="icons">
+                </div>
+                <div (click)="navig('')">
+                    <img src="assets/icons/fb.svg" alt="icons">
+                </div>
+            </div>
+        </div>
+
+        <div class="trois">
+            <div class="main">{{"liens-utiles" | translate }}</div>
+            <div routerLink="/home">{{"a-propos" | translate }}</div>
+            <div routerLink="/contact">{{"contact-us" | translate }}</div>
+            <div routerLink="/cgv">{{"cgv" | translate }}</div>
+            <div routerLink="/rgpd">{{"rgpd" | translate }}</div>
+        </div>
+    </div>
+</div>
+
+<!--
+ "activite": "Vente en ligne de plantes grasses succulentes",
+    "adresse":"Chaussée de Malines 274",
+    "pays": "Belgique",
+    "follow-us": "Suivez-nous",
+    "liens-utiles": "Liens utiles",
+    "a-propos": "A propos",
+    "contact-us": "Nous contacter",
+    "info-livr": "Info sur la livraison",
+    "cgv": "Conditions générales de vente",
+    "rgpd": "Politique de confidentialité",
+-->

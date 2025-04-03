@@ -1,0 +1,22 @@
+<div class="container">
+    <div class="account">
+        <div class="notif" [innerHTML]="notif"></div>
+        <div *ngIf="!!user; else noLoggin">
+            <div class="welkom">
+                {{ 'welkom' | translate }} {{user.displayName}} !
+                <button (click)="deco()">{{"se-deco" | translate }}</button>
+            </div>
+            <div class="details">
+                <app-orders [orders]="orders"></app-orders>
+                <app-delivery [address2]="address"></app-delivery>
+            </div>
+        </div>
+
+        <ng-template #noLoggin>
+            <div class="noLoggin">
+                <button (click)="co()">{{'co-google' | translate}}<img src="assets/icons/google.svg" alt="google"/></button>
+            </div>
+        </ng-template>
+
+    </div>
+</div>

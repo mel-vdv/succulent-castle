@@ -1,0 +1,47 @@
+.container {
+    background-color: #363333;
+    color: white;
+    font-size: 20px;
+
+    .footer {
+        display: flex;
+        flex-wrap: wrap;
+        > div {
+            box-sizing: border-box;
+            padding: 10px;
+            width: 33%;
+            flex-direction: column;
+            text-align: center;
+
+            img {
+               height: 50px;
+               max-width: 100%;
+            }
+
+            .links {
+                display: flex;
+                flex-direction: row;
+                justify-content: center;
+                gap: 20px;
+            }
+
+            .main {
+                font-weight: bold;
+                text-transform: uppercase;
+                margin-bottom: 15px;
+            }
+        }
+        
+        @media screen and (max-width: 700px) {
+           .deux, .trois {
+                box-sizing: border-box;
+                width: 50%;
+           }
+            .un {
+                box-sizing: border-box;
+                width: 100%;
+            }
+        }
+    }
+
+}

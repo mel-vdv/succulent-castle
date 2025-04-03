@@ -1,0 +1,20 @@
+<div class="container">
+    <div class="collection">
+        <h1>{{ 'favoritesh1' | translate }}</h1>
+        <div class="liste" *ngIf="plantes.length else noFav">
+            <div class="case" *ngFor="let plante of plantes">
+                <div class="vendu" *ngIf="!plante.dispo">EN RUPTURE</div>
+                <img src="assets/icons/coeur-pink.svg" alt="coeur" (click)="removeFav(plante.image)">
+                <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante" (click)="navig(plante)">
+                <div class="genre">{{ plante.genre | uppercase }} </div>
+                <div class="espece">{{ plante.espece }}</div>
+                <div class="prix">€ {{ plante.prix | virgule }}</div>
+            </div>
+        </div>
+        <ng-template class="vide" #noFav>
+            <div class="vide">
+                {{"no-favoris" | translate | uppercase}}
+            </div>
+        </ng-template>
+    </div>
+</div>

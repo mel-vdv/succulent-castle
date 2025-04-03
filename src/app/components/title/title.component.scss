@@ -1,0 +1,16 @@
+.container {
+    border-bottom: #363333 1px solid;
+
+    .title {
+        height: 200px;
+
+        @media screen and (max-width:600px) {
+            height: 150px;
+        }
+        img {
+            display: block;
+            margin: auto;
+            height: 100%;
+        }
+    }
+}

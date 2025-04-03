@@ -1,0 +1,41 @@
+.container {
+    background-image: url(/assets/fonds/fond-graphique-pink2.jpg);
+    background-repeat: repeat;
+    background-size: contain;
+    padding: 20px;
+    .slogan {
+        background-color: white;
+        padding: 20px;
+        border-radius: 25px;
+        text-align: center;
+        >div:first-child {
+            text-transform: uppercase;
+            font-size: 30px;
+            font-weight: bold;
+        }
+        >div:nth-child(2) {
+            font-size: 20px;
+        }
+        >div:nth-child(3) {
+            font-size: 27px;
+            margin-bottom: 20px;
+        }
+        .logos {
+            display: flex;
+            justify-content: center;
+            gap: 20px;
+            div {
+                display: flex;
+                flex-direction: column;
+                align-items: center;
+                background-color: rgba(216,16,86,0.1);
+                border-radius: 15px;
+                padding: 15px;
+                font-size: 22px;
+                img {
+                    height: 30px;
+                }
+            }
+        }
+    }
+}
