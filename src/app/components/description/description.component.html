@@ -29,9 +29,15 @@
                     {{ 'add-panier' | translate }}
                 </button>
             </div>
-            <div class="share" (click)="share()">
+            <div class="share" (click)="sharing = true">
                 <img src="assets/icons/share.svg" alt="partager">
                 {{ "share" | translate }}
+            </div>
+            <div class="share" *ngIf="sharing">
+                <img src="assets/icons/copypaste.svg" alt="icons-share" (click)="copypaste()"> {{"copy-paste" | translate}}
+            </div>
+            <div class="share" *ngIf="sharing">
+                <a href="whatsappLink" target="_blank" rel="noopener noreferrer"><img src="assets/icons/whatsapp.svg" alt="icons-share">{{"share-whatsapp" | translate}}</a>
             </div>
         </div>
     </div>

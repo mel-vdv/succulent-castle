@@ -3,6 +3,7 @@
     box-sizing: border-box;
     ::ng-deep h1 {
         text-align: left;
+        width: 100%;
     }
     .payment {
         width: min(100vw, 1500px);
@@ -19,66 +20,83 @@
                 }
             }
         }
-        .livr-paym {
-            background-color: rgba(0,0,0,0.04);
-            border-radius: 20px;
-            padding: 10px;
-            .livr {
+        #xxx {
+            @media screen and (max-width: 700px) {
+                display: flex; flex-direction: column; gap: 0;
             }
-            .stripe {
-                button{
-                    all: unset;
-                    color: white;
-                    background-color: rgb(216,16,86);
-                    border-radius: 25px;
-                    padding: 10px 20px;
-                    display: block;
-                    margin: 10px auto;
-                    &:hover {
-                        font-weight: bold;
+            
+            .livr-paym {
+                background-color: rgba(0,0,0,0.04);
+                border-radius: 20px;
+                padding: 10px;
+                .livr {
+                }
+                .stripe {
+                    button{
+                        all: unset;
+                        color: white;
+                        background-color: rgb(216,16,86);
+                        border-radius: 25px;
+                        padding: 10px 20px;
+                        display: block;
+                        margin: 10px auto;
+                        &:hover {
+                            font-weight: bold;
+                        }
                     }
                 }
             }
-        }
-        .recap {
-            display: flex; flex-direction: column; align-items: end;
-            .panier {
-                display: flex; align-items: center; justify-content: space-between;
-                width: 450px;
-                margin: 5px 0;
-                img[alt='miniature'] {
-                    height: 100px;
-                    border-radius: 10px;
-                    margin-right: 10px;
+            .recap {
+                display: flex; flex-direction: column; align-items: end;
+                .panier {
+                    display: flex; align-items: center; justify-content: space-between;
+                    width: 450px;
+                    img[alt='miniature'] {
+                        height: 100px;
+                        border-radius: 10px;
+                        margin-right: 10px;
+                    }
+                } 
+                @media screen and (max-width:700px) {
+                    align-items: center;
+                    padding: 0 20px;
+                    .panier {
+                        width: 100%;
+                    }
                 }
-            }
-            .code {
-                input, button {
-                    all: unset;
-                    border: 1px solid rgb(216,16,86);
-                    padding: 5px;
-                    border-radius: 4px;
-                    text-align: center;
-                    margin: 0 5px;
+                .code {
+                    width: 550px;
+                    @media screen and (max-width:700px) {
+                        width: 100%;
+                    }
+                    input, button {
+                        all: unset;
+                        border: 1px solid rgb(216,16,86);
+                        padding: 5px;
+                        border-radius: 4px;
+                        text-align: center;
+                        margin: 0 5px;
+                    }
+                    input{
+                        width: 65%;
+                    }
+                    button {
+                        color: white;
+                        background-color: rgb(216,16,86);
+                    }
                 }
-                input{
-                    width: 400px;
+                div {
+                    text-align: right;
+                    margin: 10px 0;
                 }
-                button {
+                .total-final {
                     color: white;
                     background-color: rgb(216,16,86);
+                    padding: 5px 15px;
+                    border-radius: 4px;
                 }
             }
-            div {
-                text-align: right;
-                margin: 10px 0;
-            }
-            .total-final {
-                color: white;
-                background-color: rgb(216,16,86);
-                padding: 5px 15px;
-                border-radius: 4px;
-            }
         }
+       
     }
 }

@@ -19,6 +19,8 @@ export class DescriptionComponent implements OnInit {
   qte: number = 1;
   uid?: string;
   couleur: string = "blanc";
+  sharing: boolean = false;
+  shareUrl: string ="";
 
   constructor(
     private ficheServ: FicheService,
@@ -57,8 +59,21 @@ export class DescriptionComponent implements OnInit {
   }
 
   share() {
-    console.log('route', this.route.url);
-    
+    this.shareUrl = window.location.origin + this.route.url;
+  }
+
+  copypaste() {
+    navigator.clipboard.writeText(this.shareUrl).then(() => {
+      alert('Lien copié dans le presse-papier !');
+      this.sharing = false;
+    }, (err) => {
+      alert('Erreur lors de la copie : ' + err);
+    });
+  }
+
+  get whatsappLink() {
+    this.sharing = false;
+    return `https://wa.me/?text=${encodeURIComponent(this.shareUrl)}`;
   }
 
   toogleCoeur() {
