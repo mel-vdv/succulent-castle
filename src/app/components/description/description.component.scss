@@ -5,6 +5,9 @@
         width: min(100vw, 1400px);
         display: flex;
         justify-content: center; 
+        > div {
+            padding: 20px; box-sizing: border-box;
+        }
         @media screen and (max-width: 700px) {
             flex-direction: column;
         }
@@ -12,8 +15,7 @@
         .photo {
             width: 50%;
             @media screen and (max-width: 700px) {
-                width: 90%;
-                margin: auto;
+                width: 100%;
             }
             .main {
                 position: relative;
@@ -35,8 +37,8 @@
         .buybox {
             width: 50%; 
             @media screen and (max-width: 700px) {
+                width: 100%;
             }
-            padding: 20px; box-sizing: border-box;
 
             >div {
                 margin-bottom: 20px;

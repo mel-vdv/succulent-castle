@@ -2,26 +2,37 @@
     background-image: url(/assets/fonds/fond-graphique-pink2.jpg);
     background-repeat: repeat;
     background-size: contain;
-    padding: 20px;
+    padding: min(5vw, 20px);
+    box-sizing: border-box;
     .slogan {
+        width: min(90vw, 1400px);
         background-color: white;
-        padding: 20px;
+        padding: 20px; box-sizing: border-box;
         border-radius: 25px;
         text-align: center;
         >div:first-child {
             text-transform: uppercase;
             font-size: 30px;
             font-weight: bold;
+            @media screen and (max-width: 700px) {
+               font-size: 24px;
+            }
         }
         >div:nth-child(2) {
             font-size: 20px;
+            @media screen and (max-width: 700px) {
+                font-size: 18px;
+            }
         }
         >div:nth-child(3) {
             font-size: 27px;
-            margin-bottom: 20px;
+            margin-bottom: 20px; box-sizing: border-box;
+            @media screen and (max-width: 700px) {
+                font-size: 20px;
+            }
         }
         .logos {
-            display: flex;
+            display: flex; flex-wrap: wrap;
             justify-content: center;
             gap: 20px;
             div {
@@ -30,11 +41,17 @@
                 align-items: center;
                 background-color: rgba(216,16,86,0.1);
                 border-radius: 15px;
-                padding: 15px;
+                padding: 15px; box-sizing: border-box;
                 font-size: 22px;
                 img {
                     height: 30px;
+                    margin-bottom: 15px;
                 }
+            }
+        }
+        em {
+            @media screen and (max-width: 700px) {
+                display: none;
             }
         }
     }

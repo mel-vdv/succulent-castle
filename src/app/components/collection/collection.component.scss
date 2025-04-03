@@ -10,19 +10,29 @@
         .filtre {
             height: 100px;
             width: 100%;
+            margin: auto;
             display: flex; align-items: center; justify-content: center; gap: 100px;
+            @media screen and (max-width: 700px) {
+                gap:0;
+            }
 
             div {
                 align-items: center;
-            }
-
-            select {
-                background-color: white;
-                padding: 5px;
-                border: 2px solid rgb(216,16,86);
-                option:hover {
-                    background-color: rgb(216,16,86);
-                    color: white;
+                box-sizing: border-box;
+                @media  screen and (max-width: 700px) {
+                    padding: 0 10px;
+                    font-size: 18px;
+                    select { font-size: 18px !important;}
+                }
+                select {
+                    font-size: 25px;
+                    background-color: white;
+                    padding: 5px;
+                    border: 2px solid rgb(216,16,86);
+                    option:hover {
+                        background-color: rgb(216,16,86);
+                        color: white;
+                    }
                 }
             }
         }
