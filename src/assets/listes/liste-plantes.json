@@ -3,432 +3,1782 @@
     "image": "AEONIUM pink witch.jpg",
     "genre": "AEONIUM",
     "espece": "Pink Witch",
-    "prix": 15,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 15,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 0.5,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "COTYLEDON orbiculata var panachée.png",
     "genre": "COTYLEDON",
     "espece": "Orbiculata var panachée",
-    "prix": 62,
-    "dispo": 0,
+    "stock": {
+      "p": {
+        "prix": 62,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "COTYLEDON orbiculata.jpg",
     "genre": "COTYLEDON",
     "espece": "Orbiculata",
-    "prix": 50,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 58.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "COTYLEDON orbiculata 2.jpg",
     "genre": "COTYLEDON",
     "espece": "Orbiculata",
-    "prix": 13,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 13,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "COTYLEDON tomentosa.jpg",
     "genre": "COTYLEDON",
     "espece": "Tomentosa",
-    "prix": 12,
-    "dispo": 0,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "CRASSULA capitella.jpg",
     "genre": "CRASSULA",
-    "espece": "Capitella",
-    "prix": 14,
-    "dispo": 0,
+    "espece": "Capitella ",
+    "stock": {
+      "p": {
+        "prix": 14,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "CRASSULA mesembryanthoide.jpg",
     "genre": "CRASSULA",
     "espece": "Mesembryanthoide",
-    "prix": 15,
-    "dispo": 0,
+    "stock": {
+      "p": {
+        "prix": 15,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "CRASSULA tarantula.jpg",
     "genre": "CRASSULA",
     "espece": "Tarantula",
-    "prix": 16.5,
-    "dispo": 0,
+    "stock": {
+      "p": {
+        "prix": 16.5,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "DELOSPERMA lehmannii.jpg",
     "genre": "DELOSPERMA",
     "espece": "Lehmannii",
-    "prix": 5.5,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 5.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA agavoides.jpg",
     "genre": "ECHEVERIA",
     "espece": "Agavoides",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA Beyoncé panaché.png",
     "genre": "ECHEVERIA",
     "espece": "Beyoncé panaché",
-    "prix": 14,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 14,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA black madiba.png",
     "genre": "ECHEVERIA",
     "espece": "Black madiba",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA blauw pauw paon bleu.jpg",
     "genre": "ECHEVERIA",
     "espece": "Paon bleu",
-    "prix": 10,
-    "dispo": 4,
+    "stock": {
+      "p": {
+        "prix": 18.5,
+        "dispo": 4,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA champagne.png",
     "genre": "ECHEVERIA",
     "espece": "Champagne",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA claudia.jpg",
     "genre": "ECHEVERIA",
     "espece": "Claudia",
-    "prix": 15,
-    "dispo": 4,
+    "stock": {
+      "p": {
+        "prix": 15,
+        "dispo": 4,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA cubic frost.jpg",
     "genre": "ECHEVERIA",
     "espece": "Cubic frost",
-    "prix": 12,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA elegans.png",
     "genre": "ECHEVERIA",
     "espece": "Elegans",
-    "prix": 10,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 18.5,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA lilacina.jpg",
     "genre": "ECHEVERIA",
     "espece": "Lilacina",
-    "prix": 5.6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 5.6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA Perle von Nurnberg.jpg",
     "genre": "ECHEVERIA",
     "espece": "Perle von Nurnberg",
-    "prix": 3.6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 3.6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA pidan.png",
     "genre": "ECHEVERIA",
     "espece": "Pidan",
-    "prix": 4.5,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 4.5,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA pidan.jpg",
     "genre": "ECHEVERIA",
     "espece": "Pidan",
-    "prix": 4.5,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 4.5,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA pink ruby.png",
     "genre": "ECHEVERIA",
     "espece": "Pink ruby",
-    "prix": 5,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA purpusiorum.jpg",
     "genre": "ECHEVERIA",
     "espece": "Purpusiorum",
-    "prix": 6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA rainbow.jpg",
     "genre": "ECHEVERIA",
     "espece": "rainbow",
-    "prix": 7,
-    "dispo": 3,
+    "stock": {
+      "p": {
+        "prix": 7,
+        "dispo": 3,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA soul.png",
     "genre": "ECHEVERIA",
     "espece": "soul",
-    "prix": 8,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 8,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA strawberry jam.jpg",
     "genre": "ECHEVERIA",
     "espece": "strawberry jam",
-    "prix": 10,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 18.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "ECHEVERIA violet.png",
     "genre": "ECHEVERIA",
     "espece": "violet",
-    "prix": 29,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 29,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "FENESTRARIA auriantica.png",
     "genre": "FENESTRARIA",
     "espece": "auriantica",
-    "prix": 28,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 28,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "FRITHIA Pulchra panachée.png",
     "genre": "FRITHIA",
     "espece": "Pulchra panachée",
-    "prix": 26,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 26,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GRAPTOPETALUM amethystinum.jpg",
     "genre": "GRAPTOPETALUM",
     "espece": "amethystinum",
-    "prix": 24,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 24,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GRAPTOPETALUM paraguayense.jpg",
     "genre": "GRAPTOPETALUM",
     "espece": "paraguayense",
-    "prix": 25,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 25,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GRAPTOPETALUM paraguayense 2.jpg",
     "genre": "GRAPTOPETALUM",
     "espece": "paraguayense",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GREENOVIA Aurea ex El Hierro.png",
     "genre": "GREENOVIA",
     "espece": "Aurea ex El Hierro 'Rose des montagnes rose'",
-    "prix": 15,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 15,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GREENOVIA dodrentalis.png",
     "genre": "GREENOVIA",
     "espece": "dodrentalis",
-    "prix": 125,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 125,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GREENOVIA La Palma.png",
     "genre": "GREENOVIA",
     "espece": "La Palma",
-    "prix": 70,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 78.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "GREENOVIA Princess Lola.png",
     "genre": "GREENOVIA",
     "espece": "Princess Lola",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "HAWORTHIA cooperi.jpg",
     "genre": "HAWORTHIA",
     "espece": "cooperi",
-    "prix": 6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "HAWORTHIA cymbiformis.png",
     "genre": "HAWORTHIA",
     "espece": "cymbiformis",
-    "prix": 5.5,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 5.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "HAWORTHIA symbiformis.jpg",
     "genre": "HAWORTHIA",
     "espece": "symbiformis.",
-    "prix": 4,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 4,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "KALANCHOE fedtschenkoi.jpg",
     "genre": "KALANCHOE",
     "espece": "fedtschenkoi",
-    "prix": 3,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 3,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "KALANCHOE.jpg",
     "genre": "KALANCHOE",
     "espece": "",
-    "prix": 2,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 2,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "LITHOPS optica.jpg",
     "genre": "LITHOPS",
     "espece": "optica",
-    "prix": 11,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 11,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "PACHYPHYTUM Capitaine Jessop.png",
     "genre": "PACHYPHYTUM",
     "espece": "Capitaine Jessop",
-    "prix": 26,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 26,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "PACHYPHYTUM compactum.jpg",
     "genre": "PACHYPHYTUM",
     "espece": "compactum",
-    "prix": 42,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 42,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "PACHYPHYTUM oviferum.jpg",
     "genre": "PACHYPHYTUM",
     "espece": "oviferum",
-    "prix": 6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM adolphii.jpg",
     "genre": "SEDUM",
     "espece": "Adolphii",
-    "prix": 5,
-    "dispo": 2,
+    "stock": {
+      "p": {
+        "prix": 5,
+        "dispo": 2,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM adolphii golden glow.jpg",
     "genre": "SEDUM",
     "espece": "Adolphii golden glow",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM dasyphyllum.jpg",
     "genre": "SEDUM",
     "espece": "Dasyphyllum",
-    "prix": 15,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 15,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM mendozae.jpg",
     "genre": "SEDUM",
     "espece": "Mendozae",
-    "prix": 16,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 16,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM rubrotinctum.jpg",
     "genre": "SEDUM",
     "espece": "Rubrotinctum",
-    "prix": 18,
-    "dispo": 0,
+    "stock": {
+      "p": {
+        "prix": 18,
+        "dispo": 8.5,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEDUM.jpg",
     "genre": "SEDUM",
     "espece": "",
-    "prix": 20.3,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 28.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEMPERVIVUM globiferum.jpg",
     "genre": "SEMPERVIVUM",
     "espece": "globiferum",
-    "prix": 40.2,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 48.5,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "SEMPERVIVUM.jpg",
     "genre": "SEMPERVIVUM",
     "espece": "-",
-    "prix": 12,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 12,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   },
   {
     "image": "TITANOPSIS calcarea.jpg",
     "genre": "TITANOPSIS",
     "espece": "Calcarea",
-    "prix": 6,
-    "dispo": 1,
+    "stock": {
+      "p": {
+        "prix": 6,
+        "dispo": 1,
+        "diam": 5
+      },
+      "g": {
+        "prix": 5.3,
+        "dispo": 1
+      },
+      "fsr": {
+        "prix": 4.2,
+        "dispo": 2
+      },
+      "fr": {
+        "prix": 8.5,
+        "dispo": 0
+      },
+      "rsr": {
+        "prix": 15.5,
+        "dispo": 0
+      },
+      "rr": {
+        "prix": 25.5,
+        "dispo": 0
+      }
+    },
     "coeur": "blanc"
   }
 ]

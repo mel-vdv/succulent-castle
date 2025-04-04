@@ -53,7 +53,7 @@ export class ShoppingCartComponent implements OnInit {
       .subscribe((p:ObjetPanier[]) => {
         if (p && p[i]) {
           p[i].qte += nb;
-          p[i].soustotal = p[i].plante.prix * p[i].qte;
+          p[i].soustotal = p[i].plante.stock.p.prix * p[i].qte;
           this.crud.updatePanier(this.user!.uid!, p);
         }
       })

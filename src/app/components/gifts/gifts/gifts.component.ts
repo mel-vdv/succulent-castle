@@ -5,7 +5,7 @@ import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
 import  listeGifts  from 'src/assets/listes/liste-gifts.json';
 import { User } from '@angular/fire/auth';
-import { Cadeau } from 'src/app/interfaces/cadeau';
+import { Plante } from 'src/app/interfaces/plante';
 
 @Component({
   selector: 'app-gifts',
@@ -21,7 +21,7 @@ export class GiftsComponent implements OnInit {
     private authServ: AuthService
   ) { }
 
-  gifts!: Cadeau[];
+  gifts!: Plante[];
   user!: User | null;
   favoris?: Promise<string[]>;
 
@@ -43,7 +43,7 @@ export class GiftsComponent implements OnInit {
       this.favoris = this.getFav(this.user.uid);
       this.favoris?.then((f) => {
         if (f.length) {
-          this.gifts = this.gifts.map( (g: Cadeau) => {
+          this.gifts = this.gifts.map( (g: Plante) => {
           return {...g, coeur: f.includes(g.image) ? 'pink' : 'blanc'};
           });
         } 
@@ -55,7 +55,7 @@ export class GiftsComponent implements OnInit {
   }
 
   //vers la fiche description : 
-  navig(gift: Cadeau) {
+  navig(gift: Plante) {
     this.ficheServ.setGift(gift);
     const isFav = gift.coeur === "pink";
     const url = isFav ? `gift/${gift.image}/f` : `gift/${gift.image}`;

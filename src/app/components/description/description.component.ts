@@ -98,7 +98,7 @@ export class DescriptionComponent implements OnInit {
   addPanier() {
     if(!!this.user?.uid) {
       const objetPanier = {
-        plante: this.plante, qte: Number(this.qte), soustotal: Number(this.qte * this.plante.prix)
+        plante: this.plante, qte: Number(this.qte), soustotal: Number(this.qte * this.plante.stock.p.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

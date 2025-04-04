@@ -2,7 +2,7 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Cadeau } from 'src/app/interfaces/cadeau';
+import { Plante } from 'src/app/interfaces/plante';
 import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
@@ -16,7 +16,7 @@ import liste from 'src/assets/listes/liste-gifts.json';
 export class GiftComponent implements OnInit {
 
   user!: User | null;
-  gift!: Cadeau;
+  gift!: Plante;
   qte: number = 1;
   uid?: string;
   couleur: string = "blanc";
@@ -40,7 +40,7 @@ export class GiftComponent implements OnInit {
   getGift() {
     this.gift = this.ficheServ.getGift()!;
     const id = this.route.snapshot.paramMap.get('id');
-    this.gift = liste.find( (g: Cadeau) => decodeURIComponent( g.image) === id)!;
+    this.gift = liste.find( (g: Plante) => decodeURIComponent( g.image) === id)!;
   }
 
   getCouleur() {
@@ -99,7 +99,7 @@ export class GiftComponent implements OnInit {
   addPanier() {
     if(!!this.user?.uid) {
       const objetPanier = {
-        plante: this.gift, qte: Number(this.qte), soustotal: Number(this.qte * this.gift.prix)
+        plante: this.gift, qte: Number(this.qte), soustotal: Number(this.qte * this.gift.stock.p.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

@@ -1,7 +1,5 @@
-import { GiftComponent } from './../components/gifts/gift/gift.component';
 import { Injectable } from '@angular/core';
 import { Plante } from '../interfaces/plante';
-import { Cadeau } from '../interfaces/cadeau';
 
 @Injectable({
   providedIn: 'root'
@@ -12,7 +10,7 @@ export class FicheService {
   ) { }
 
   plante?: Plante;
-  gift?: Cadeau;
+  gift?: Plante;
   panierLength: number = 0;
   notif: string = "";
 
@@ -23,10 +21,10 @@ export class FicheService {
     return this.plante;
   }
   
-  setGift(gift: Cadeau) {
+  setGift(gift: Plante) {
     this.gift = gift;
   }
-  getGift(): Cadeau | undefined {
+  getGift(): Plante | undefined {
     return this.gift;
   }
 

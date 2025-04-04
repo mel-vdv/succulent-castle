@@ -1,21 +1,28 @@
 [
     {
-        "genre": "Coffret",
-        "espece": "'Blue Dream'",
-        "image": "gift1.png",
-        "carroussel":3 ,
-        "prix": 42,
-        "stock": 3,
-        "coeur": "blanc"
+      "image": "gift1",
+      "genre": "Coffret",
+      "espece": " 'blue dream'",
+      "stock": {
+        "p": {
+          "prix": 42,
+          "dispo": 2
+        }
+      },
+      "coeur": "blanc",
+      "carroussel": 3
     },
-    
     {
-        "genre": "Coffret",
-        "espece": "'Pinky Dream'",
-        "image": "gift1.png",
-        "carroussel":3 ,
-        "prix": 36,
-        "stock": 3,
-        "coeur": "blanc"
+      "image": "gift2",
+      "genre": "Terrarium",
+      "espece": "'Forêt miniature'",
+      "stock": {
+        "p": {
+          "prix": 38,
+          "dispo": 0
+        }
+      },
+      "coeur": "blanc",
+      "carroussel": 2
     }
-]
+  ]

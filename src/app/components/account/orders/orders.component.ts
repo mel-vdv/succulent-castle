@@ -16,12 +16,10 @@ export class OrdersComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    console.log('on init');
   }
 
   ngOnChanges(changes: SimpleChanges): void {
     if (changes['orders'] && !!this.orders) {
-      console.log('on changes');
     }
   }
 

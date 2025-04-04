@@ -11,7 +11,7 @@
                     <img [src]="'assets/PHOTOS SUCCULENTES/' + ligne.plante.image" alt="miniature">
                 </div>
                 <div>{{ligne.plante.genre | uppercase}} {{ligne.plante.espece | titlecase}} </div>
-                <div>{{ligne.plante.prix}} x {{ligne.qte}} = {{ligne.soustotal}} €</div>
+                <div>{{ligne.plante.stock.p.prix }} x {{ligne.qte}} = {{ligne.soustotal}} €</div>
             </div>
         </div>
     </div>

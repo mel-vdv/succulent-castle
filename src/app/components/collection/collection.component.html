@@ -19,14 +19,14 @@
         
         <div class="liste">
             <div class="case" *ngFor="let plante of plantes; let i = index" >
-                <div class="vendu" *ngIf="!plante.dispo">EN RUPTURE</div>
+                <div class="vendu" *ngIf="!plante.stock?.p?.dispo">EN RUPTURE</div>
                 <img [src]="'assets/icons/coeur-'+ plante.coeur +'.svg'" alt="coeur" (click)="toogleFav(plante.image, plante.coeur, i)">
                 <div class="cadre">
                     <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante" (click)="navig(plante)">
                 </div>
                 <div class="genre">{{ plante.genre | uppercase }} <div>
                 <div class="espece">{{ plante.espece | titlecase }}</div>
-                <div class="prix">€ {{ plante.prix | virgule }}</div>
+                <div class="prix">€ {{ plante.stock.p.prix | virgule }}</div>
             </div>
         </div>
     </div>

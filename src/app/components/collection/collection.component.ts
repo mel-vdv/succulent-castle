@@ -65,8 +65,8 @@ export class CollectionComponent implements OnInit {
     this.plantes = x
       .sort( (a: Plante, b:Plante) => {
         switch(this.triChoisi) {
-          case "Prix croissant": return a.prix - b.prix;
-          case "Prix décroissant":  return b.prix - a.prix;
+          case "Prix croissant": return a.stock.p.prix - b.stock.p.prix;
+          case "Prix décroissant":  return b.stock.p.prix - a.stock.p.prix;
           case "de A à Z": return (a.genre + ' ' + a.espece).localeCompare(b.genre + ' '+ b.espece);
           case "de Z à A": return (b.genre + ' ' + b.espece).localeCompare(a.genre + ' ' + a.espece);
           default: return 0;

@@ -3,17 +3,17 @@
         <div class="photo">
             <div class="main">
                 <img [src]="'assets/icons/coeur-'+ couleur +'.svg'" alt="coeur" (click)="toogleCoeur()">
-                <img [src]="'assets/PHOTOS GIFTS/'+ gift.image" alt="image de la plante">
+                <img [src]="'assets/PHOTOS GIFTS/'+ gift.image + '.png'" alt="image de la plante">
             </div>
             <div class="carroussel"></div>
         </div>
         <div class="buybox">
             <div class="title">
-                <div class="genre">{{ gift.genre | titlecase }}</div>
+                <div class="genre bold">{{ gift.genre | titlecase }}</div>
                 <div class="esp">{{ gift.espece | titlecase }}</div>
             </div>
             <div class="tarif">
-                {{gift.prix | virgule }} € EUR
+                {{gift.stock.p.prix | virgule }} € EUR
                 <div class="tva tiny">{{ 'taxes-frais' | translate }}</div>
             </div>
             <div class="qte">
