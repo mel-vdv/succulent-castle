@@ -5,7 +5,7 @@
                 <div class="vendu" *ngIf="!gift.stock">EN RUPTURE</div>
                 <img [src]="'assets/icons/coeur-'+ gift.coeur +'.svg'" alt="coeur" (click)="toogleFav(gift.image, gift.coeur, i)">
                 <div class="cadre">
-                    <img [src]="'assets/PHOTOS GIFTS/' + gift.image + '.png'" alt="plante" (click)="navig(gift)">
+                    <img [src]="'assets/PHOTOS/' + gift.image" alt="plante" (click)="navig(gift)">
                 </div>
                 <div class="genre">{{ gift.genre | uppercase }} <div>
                 <div class="espece">{{ gift.espece | titlecase }}</div>

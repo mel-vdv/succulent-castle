@@ -22,7 +22,7 @@
             <div class="recap">
                 <h1>{{"recap-h1" | translate }}</h1>
                 <div class="panier" *ngFor="let p of panier$ | async">
-                    <img [src] ="'assets/PHOTOS SUCCULENTES/' + p.plante.image" alt="miniature">
+                    <img [src] ="'assets/PHOTOS/' + p.plante.image" alt="miniature">
                     <div class="names">{{p.plante.genre}} {{p.plante.espece | titlecase}} x {{p.qte}} </div>
                 </div>
                 <div class="code">

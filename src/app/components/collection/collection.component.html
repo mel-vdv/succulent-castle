@@ -22,7 +22,7 @@
                 <div class="vendu" *ngIf="!plante.stock?.p?.dispo">EN RUPTURE</div>
                 <img [src]="'assets/icons/coeur-'+ plante.coeur +'.svg'" alt="coeur" (click)="toogleFav(plante.image, plante.coeur, i)">
                 <div class="cadre">
-                    <img [src]="'assets/PHOTOS SUCCULENTES/' + plante.image" alt="plante" (click)="navig(plante)">
+                    <img [src]="'assets/PHOTOS/' + plante.image" alt="plante" (click)="navig(plante)">
                 </div>
                 <div class="genre">{{ plante.genre | uppercase }} <div>
                 <div class="espece">{{ plante.espece | titlecase }}</div>

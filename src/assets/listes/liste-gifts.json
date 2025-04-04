@@ -1,6 +1,6 @@
 [
     {
-      "image": "gift1",
+      "image": "gift1.png",
       "genre": "Coffret",
       "espece": " 'blue dream'",
       "stock": {
@@ -13,7 +13,7 @@
       "carroussel": 3
     },
     {
-      "image": "gift2",
+      "image": "gift2.png",
       "genre": "Terrarium",
       "espece": "'Forêt miniature'",
       "stock": {
