@@ -1,0 +1,21 @@
+[
+    {
+        "genre": "Coffret",
+        "espece": "'Blue Dream'",
+        "image": "gift1.png",
+        "carroussel":3 ,
+        "prix": 42,
+        "stock": 3,
+        "coeur": "blanc"
+    },
+    
+    {
+        "genre": "Coffret",
+        "espece": "'Pinky Dream'",
+        "image": "gift1.png",
+        "carroussel":3 ,
+        "prix": 36,
+        "stock": 3,
+        "coeur": "blanc"
+    }
+]

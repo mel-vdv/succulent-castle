@@ -46,6 +46,8 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
+import { GiftsComponent } from './components/gifts/gifts/gifts.component';
+import { GiftComponent } from './components/gifts/gift/gift.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/trad/', '.json');
@@ -81,7 +83,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     FavoritesComponent,
     VirgulePipe,
     OrdersComponent,
-    WhatsappComponent
+    WhatsappComponent,
+    GiftsComponent,
+    GiftComponent
   ],
   imports: [
     BrowserModule,

@@ -1,3 +1,5 @@
+import { Cadeau } from "./cadeau";
+
 export interface Plante {
     image: string;
     genre: string;
@@ -10,7 +12,7 @@ export interface Plante {
 }
 
 export interface ObjetPanier {
-    plante : Plante,
+    plante : Plante | Cadeau,
     qte: number,
     soustotal: number
 }

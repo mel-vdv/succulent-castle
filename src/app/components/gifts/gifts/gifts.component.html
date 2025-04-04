@@ -1,0 +1,16 @@
+<div class="container">
+    <div class="collection">
+        <div class="liste">
+            <div class="case" *ngFor="let gift of gifts; let i = index" >
+                <div class="vendu" *ngIf="!gift.stock">EN RUPTURE</div>
+                <img [src]="'assets/icons/coeur-'+ gift.coeur +'.svg'" alt="coeur" (click)="toogleFav(gift.image, gift.coeur, i)">
+                <div class="cadre">
+                    <img [src]="'assets/PHOTOS GIFTS/' + gift.image" alt="plante" (click)="navig(gift)">
+                </div>
+                <div class="genre">{{ gift.genre | uppercase }} <div>
+                <div class="espece">{{ gift.espece | titlecase }}</div>
+                <div class="prix">€ {{ gift.prix | virgule }}</div>
+            </div>
+        </div>
+    </div>
+</div>

@@ -1,21 +1,22 @@
-import { AuthService } from './../../services/auth.service';
+
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { ActivatedRoute, Router } from '@angular/router';
-import { Plante } from 'src/app/interfaces/plante';
+import { Cadeau } from 'src/app/interfaces/cadeau';
+import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
-import liste from 'src/assets/listes/liste-plantes.json';
+import liste from 'src/assets/listes/liste-gifts.json';
 
 @Component({
-  selector: 'app-description',
-  templateUrl: './description.component.html',
-  styleUrls: ['./description.component.scss']
+  selector: 'app-gift',
+  templateUrl: './gift.component.html',
+  styleUrls: ['./../../description/description.component.scss']
 })
-export class DescriptionComponent implements OnInit {
+export class GiftComponent implements OnInit {
 
   user!: User | null;
-  plante!: Plante;
+  gift!: Cadeau;
   qte: number = 1;
   uid?: string;
   couleur: string = "blanc";
@@ -31,15 +32,15 @@ export class DescriptionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
-    this.getPlante();
+    this.getGift();
     this.getCouleur();
     this.getUser();
   }
 
-  getPlante() {
-    this.plante = this.ficheServ.getPlante()!;
+  getGift() {
+    this.gift = this.ficheServ.getGift()!;
     const id = this.route.snapshot.paramMap.get('id');
-    this.plante = liste.find( (pl:Plante) => decodeURIComponent(pl.image) === id)!;
+    this.gift = liste.find( (g: Cadeau) => decodeURIComponent( g.image) === id)!;
   }
 
   getCouleur() {
@@ -78,18 +79,18 @@ export class DescriptionComponent implements OnInit {
 
   toogleCoeur() {
     if(!!this.user?.uid) {
-      const idPlante = this.plante?.image ?? this.route.snapshot.paramMap.get('id');
+      const idGift = this.gift?.image ?? this.route.snapshot.paramMap.get('id');
       if (this.couleur === 'pink') {
         // màj direct : 
         this.couleur = 'blanc';
         //update bdd : 
-        this.crud.removeFavori(this.user.uid, idPlante);
+        this.crud.removeFavori(this.user.uid, idGift);
       }
       else {
         //màj visuelle directe :
         this.couleur = "pink";
         // update bdd :
-        this.crud.addFavori(this.user.uid, idPlante);
+        this.crud.addFavori(this.user.uid, idGift);
       }
     }
     else this.authServ.loginWithGoogle().subscribe();
@@ -98,7 +99,7 @@ export class DescriptionComponent implements OnInit {
   addPanier() {
     if(!!this.user?.uid) {
       const objetPanier = {
-        plante: this.plante, qte: Number(this.qte), soustotal: Number(this.qte * this.plante.prix)
+        plante: this.gift, qte: Number(this.qte), soustotal: Number(this.qte * this.gift.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

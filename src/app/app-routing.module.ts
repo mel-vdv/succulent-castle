@@ -16,6 +16,8 @@ import { ContactComponent } from './components/contact/contact.component';
 import { ShoppingCartComponent } from './components/shopping-cart/shopping-cart.component';
 import { CgvComponent } from './components/cgv/cgv.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
+import { GiftsComponent } from './components/gifts/gifts/gifts.component';
+import { GiftComponent } from './components/gifts/gift/gift.component';
 
 const routes: Routes = [
   { path: "", component: HomeComponent},
@@ -23,6 +25,9 @@ const routes: Routes = [
   { path: "collection", component: CollectionComponent},
   { path: "description/:id", component: DescriptionComponent},
   { path: "description/:id/:fav", component: DescriptionComponent},
+  { path: "gifts", component: GiftsComponent},
+  { path: "gift/:id", component: GiftComponent},
+  { path: "gift/:id/:fav", component: GiftComponent},
   { path: "advices", component: AdvicesComponent},
   { path: "contact", component: ContactComponent},
   { path: "shopping-cart", component: ShoppingCartComponent},

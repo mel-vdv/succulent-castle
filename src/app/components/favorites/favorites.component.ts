@@ -5,7 +5,7 @@ import { Plante } from 'src/app/interfaces/plante';
 import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
-import liste from 'src/assets/liste-plantes.json';
+import liste from 'src/assets/listes/liste-plantes.json';
 
 @Component({
   selector: 'app-favorites',
