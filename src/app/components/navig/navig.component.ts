@@ -13,6 +13,7 @@ export class NavigComponent implements OnInit {
 
   user!: User | null;
   panierLength: number = 0;
+  menuOpened = false;
 
   constructor(
     private authServ : AuthService,

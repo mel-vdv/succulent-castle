@@ -3,6 +3,7 @@
     color: white;
     .navig {
         width: min(100vw,90%);
+        height: 50px;
         display: flex;
         justify-content: space-between;
 
@@ -15,8 +16,39 @@
         .gauche {
             text-transform: uppercase;
             font-weight: bold;
-            div:hover {
-                text-decoration: underline;
+            &.desktop {
+                div:hover {
+                    text-decoration: underline;
+                    text-underline-offset: 8px;
+                }
+                @media screen and (max-width:700px) {
+                    display: none;
+                }
+            }
+            &.mobile {
+                position: relative;
+                div {
+                    gap: 0; 
+                }
+                img[alt="menu-burger"] {
+                    height: 30px;
+                    margin-right: 10px;
+                }
+                .menuOpened {
+                    display: flex; flex-direction: column;
+                    background-color: rgb(216,16,86);
+                    text-align: center;
+                    border-radius: 10px;
+                    position: absolute;
+                    top: 0; left: 0;
+                    div:hover {
+                        background-color: white;
+                        color: rgb(216,16,86);
+                    }
+                }
+                @media screen and (min-width: 701px) {
+                    display: none;
+                }
             }
         }
         .droite {
@@ -52,5 +84,11 @@
                 }   
             }
         }
+    }
+}
+em {
+    font-style: normal;
+    @media screen and (max-width:700px) {
+        display: none;
     }
 }

@@ -1,7 +1,7 @@
 <div class="container">
     <div class="navig">
 
-        <div class="gauche">
+        <div class="gauche desktop">
             <div routerLink="/home">
                 {{"home"|translate}}
             </div>
@@ -21,6 +21,32 @@
                 {{"contact"|translate}}
             </div>
         </div>
+        <div class="gauche mobile">
+            <div *ngIf="!menuOpened" (click)="menuOpened = true">
+                <img src="assets/icons/menu.svg" alt="menu-burger"> Menu
+            </div>
+            <div *ngIf="menuOpened" class="menuOpened" (click)="menuOpened = false">
+                <div routerLink="/home">
+                    {{"home"|translate}}
+                </div>
+                <div routerLink="/collection">
+                    {{"shop"|translate}}
+                </div>
+                <div routerLink="/gift">
+                    {{"gift"|translate}}
+                </div>
+                <div routerLink="/faq">
+                    FAQ
+                </div>
+                <div routerLink="/advices">
+                    {{"advices"|translate}}
+                </div>
+                <div routerLink="/contact">
+                    {{"contact"|translate}}
+                </div>
+            </div>
+          
+        </div>
 
         <div class="droite">
             <div routerLink="/favorites">
@@ -36,17 +62,17 @@
 
             <div routerLink="/account" *ngIf="!!user">
                 <img src="assets/icons/profil.svg" alt="icons">
-                {{"account"|translate}}
+                <em>{{"account"|translate}}</em>
             </div>
 
             <div (click)="deco()" *ngIf="!!user">
                 <img src="assets/icons/exit.svg" alt="icons">
-                {{"déco"|translate}}
+                <em>{{"déco"|translate}}</em>
             </div>
 
             <div (click)="co()" *ngIf="!user">
                 <img src="assets/icons/profil.svg" alt="icons">
-                Me connecter
+                <em>{{"se-co"|translate}}</em>
             </div>
 
         </div>
