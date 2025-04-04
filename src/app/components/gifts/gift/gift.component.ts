@@ -99,7 +99,10 @@ export class GiftComponent implements OnInit {
   addPanier() {
     if(!!this.user?.uid) {
       const objetPanier = {
-        plante: this.gift, qte: Number(this.qte), soustotal: Number(this.qte * this.gift.stock.p.prix)
+        plante: this.gift,
+        option: "p",
+        qte: Number(this.qte),
+        soustotal: Number(this.qte * this.gift.stock.p.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

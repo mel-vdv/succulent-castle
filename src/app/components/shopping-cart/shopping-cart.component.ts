@@ -1,10 +1,11 @@
 import { CrudsService } from 'src/app/services/cruds.service';
 import { Component, OnInit } from '@angular/core';
-import { ObjetPanier } from 'src/app/interfaces/plante';
+import { ObjetPanier, Plante } from 'src/app/interfaces/plante';
 import { Router } from '@angular/router';
 import { Observable, take } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
+import { FicheService } from 'src/app/services/fiche.service';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -20,7 +21,8 @@ export class ShoppingCartComponent implements OnInit {
   constructor(
     private crud: CrudsService,
     public router : Router,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private ficheServ: FicheService
   ) { }
 
   ngOnInit(): void {
@@ -64,7 +66,12 @@ export class ShoppingCartComponent implements OnInit {
   trash(objetPanier: ObjetPanier) {
     this.crud.removePanier(this.user!.uid!, objetPanier);
   }
-
+  // ROUTING
+  navig(plante: Plante) {
+    this.ficheServ.setPlante(plante);
+    const url = !plante.gift ? "description/" : "gift/";
+    this.router.navigate([`${url}${plante.image}`]);
+  }
   goPayment() {
     this.router.navigate(['/payment']);
   }

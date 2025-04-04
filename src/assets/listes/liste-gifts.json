@@ -10,7 +10,8 @@
         }
       },
       "coeur": "blanc",
-      "carroussel": 3
+      "carroussel": 3,
+      "gift": 1
     },
     {
       "image": "gift2.png",
@@ -23,6 +24,7 @@
         }
       },
       "coeur": "blanc",
-      "carroussel": 2
+      "carroussel": 2,
+      "gift": 1
     }
   ]

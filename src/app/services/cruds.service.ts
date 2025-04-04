@@ -36,7 +36,7 @@ export class CrudsService {
       adresse: objetAddress
     });
   }
-  //get 
+  // get 
   async getAddress(uid: string): Promise<ObjetAddress> {
     const documentRef = doc(this.firestore,`customers/${uid}`);
     const leDoc = await getDoc(documentRef);
@@ -44,7 +44,7 @@ export class CrudsService {
     else throw Error('Document panier not found');
   }
 
-  //PANIER//////////////////////////////////////////////////////////
+  // PANIER //////////////////////////////////////////////////////////
   // add un item
   addPanier(uid: string, objetPanier: ObjetPanier) {
     const documentRef = doc(this.firestore, `customers/${uid}`);
@@ -53,14 +53,14 @@ export class CrudsService {
     });
   }
   // remove item panier :
-  removePanier (uid: string, objetPanier: ObjetPanier) { console.log('trash');
+  removePanier (uid: string, objetPanier: ObjetPanier) {
     const documentRef = doc(this.firestore, `customers/${uid}`);
     return updateDoc(documentRef, {
       panier: arrayRemove(objetPanier)
     });
   }
   // update au panier : 
-  updatePanier(uid: string, objetPanier: ObjetPanier[]) { console.log('update');
+  updatePanier(uid: string, objetPanier: ObjetPanier[]) {
     const documentRef = doc(this.firestore, `customers/${uid}`);
     return updateDoc(documentRef, {
       panier: objetPanier
@@ -106,7 +106,7 @@ export class CrudsService {
   }
 
   /// COMMANDES///////////////////////////////////////////////
-     // FAVORIS///////////////////////////////////////////////////
+  // FAVORIS//////////////////////////////////////////////////
    //get
    async getOrders(uid: string): Promise<Commande[]> {
     const documentRef = doc(this.firestore,`customers/${uid}`);

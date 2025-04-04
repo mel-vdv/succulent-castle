@@ -56,7 +56,8 @@
                     width: 100%;
                     .nom {
                         width: 40%;
-                        justify-content: flex-start;
+                        display: block;
+                        text-align: right;
                     }
                     .qte {
                         width: 30%;

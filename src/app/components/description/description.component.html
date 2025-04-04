@@ -16,6 +16,18 @@
                 {{plante.stock.p.prix | virgule }} € EUR
                 <div class="tva tiny">{{ 'taxes-frais' | translate }}</div>
             </div>
+            <div class="option">
+                <div class="tiny">{{"option"|translate}}</div>
+                <div (click)="optionsVisibles = true" *ngIf="!optionsVisibles" class="defaultChevron">
+                    {{ optionChoisie | translate }}
+                    <img src="assets/icons/chevron-bottom.svg" alt="chevron">
+                </div>
+                <div *ngIf="optionsVisibles" class="listeOptions">
+                    <div *ngFor="let option of options; let i = index;" (click)="choisirOption(i)">
+                        {{option | translate}}
+                    </div>
+                </div>
+            </div>
             <div class="qte">
                 <div class="tiny">{{"qte"|translate}}</div>
                 <div class="setQte">

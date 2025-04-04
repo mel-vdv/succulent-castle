@@ -29,6 +29,8 @@ import { CgvComponent } from './components/cgv/cgv.component';
 import { FavoritesComponent } from './components/favorites/favorites.component';
 import { OrdersComponent } from './components/account/orders/orders.component';
 import { WhatsappComponent } from './components/contact/whatsapp/whatsapp.component';
+import { GiftsComponent } from './components/gifts/gifts/gifts.component';
+import { GiftComponent } from './components/gifts/gift/gift.component';
 //PIPES :
 import { VirgulePipe } from './pipes/virgule.pipe';
 
@@ -46,8 +48,6 @@ import { provideFirestore, getFirestore } from '@angular/fire/firestore';
 import { TranslateLoader, TranslateModule } from '@ngx-translate/core';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { HttpClient, HttpClientModule } from '@angular/common/http';
-import { GiftsComponent } from './components/gifts/gifts/gifts.component';
-import { GiftComponent } from './components/gifts/gift/gift.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/trad/', '.json');
@@ -81,11 +81,11 @@ export function HttpLoaderFactory(http: HttpClient) {
     AdvicesComponent,
     CgvComponent,
     FavoritesComponent,
-    VirgulePipe,
     OrdersComponent,
     WhatsappComponent,
     GiftsComponent,
-    GiftComponent
+    GiftComponent,
+    VirgulePipe,
   ],
   imports: [
     BrowserModule,

@@ -15,12 +15,18 @@ import liste from 'src/assets/listes/liste-plantes.json';
 export class DescriptionComponent implements OnInit {
 
   user!: User | null;
+  uid?: string;
+
   plante!: Plante;
   qte: number = 1;
-  uid?: string;
   couleur: string = "blanc";
+
   sharing: boolean = false;
   shareUrl: string ="";
+
+  options: string[] = [];
+  optionChoisie: string="";
+  optionsVisibles: boolean = false;
 
   constructor(
     private ficheServ: FicheService,
@@ -31,20 +37,9 @@ export class DescriptionComponent implements OnInit {
   ) { }
 
   ngOnInit(): void {
+    this.getUser();
     this.getPlante();
     this.getCouleur();
-    this.getUser();
-  }
-
-  getPlante() {
-    this.plante = this.ficheServ.getPlante()!;
-    const id = this.route.snapshot.paramMap.get('id');
-    this.plante = liste.find( (pl:Plante) => decodeURIComponent(pl.image) === id)!;
-  }
-
-  getCouleur() {
-    const fav = this.route.snapshot.paramMap.get('fav') ?? null;
-    this.couleur = !! fav ? 'pink' : 'blanc';
   }
 
   getUser() {
@@ -52,6 +47,33 @@ export class DescriptionComponent implements OnInit {
       this.user = user;
       this.toogleCoeur();
     });
+  }
+
+  getPlante() {
+    this.plante = this.ficheServ.getPlante()!;
+    const id = this.route.snapshot.paramMap.get('id');
+    this.plante = liste.find( (pl:Plante) => decodeURIComponent(pl.image) === id)!;
+    this.getOption();
+  }
+
+  getCouleur() {
+    const fav = this.route.snapshot.paramMap.get('fav') ?? null;
+    this.couleur = !! fav ? 'pink' : 'blanc';
+  }
+  
+  getOption() {
+    if (this.plante.stock.p.dispo) this.options.push("p");
+    if (this.plante.stock.rr?.dispo) this.options.push("rr");
+    if (this.plante.stock.rsr?.dispo) this.options.push("rsr");
+    if (this.plante.stock.fr?.dispo) this.options.push("fr");
+    if (this.plante.stock.fsr?.dispo) this.options.push("fsr");
+    if (this.plante.stock.g?.dispo) this.options.push("g");
+    this.optionChoisie = this.options[0];
+  }
+
+  choisirOption(i: number) {
+    this.optionChoisie = this.options[i];
+    this.optionsVisibles = false;
   }
 
   setQte(nb: number) {
@@ -98,7 +120,10 @@ export class DescriptionComponent implements OnInit {
   addPanier() {
     if(!!this.user?.uid) {
       const objetPanier = {
-        plante: this.plante, qte: Number(this.qte), soustotal: Number(this.qte * this.plante.stock.p.prix)
+        plante: this.plante,
+        option: this.optionChoisie,
+        qte: Number(this.qte),
+        soustotal: Number(this.qte * this.plante.stock.p.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

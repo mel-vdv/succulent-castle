@@ -12,10 +12,12 @@ export interface Plante {
         }
     coeur: string;
     carroussel?: number;
+    gift?: number;
     };
 
 export interface ObjetPanier {
     plante : Plante,
+    option: string,
     qte: number,
     soustotal: number
 }

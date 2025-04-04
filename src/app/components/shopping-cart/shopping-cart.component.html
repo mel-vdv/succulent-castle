@@ -16,12 +16,14 @@
 
             <div class="produits">
                 <div class="produit" *ngFor="let produit of panier$ | async; let i = index;">
-                    <div class="image">
-                        <img [src]="'assets/PHOTOS/'+ produit.plante.image" alt="photo plante"> 
+                    <div class="image" (click)="navig(produit.plante)">
+                        <img [src]="'assets/PHOTOS/'+ produit.plante.image" alt="photo plante">
                     </div>
                     <div class="blocInfos">
                          <div class="nom">
-                        {{produit.plante.genre | uppercase}} {{produit.plante.espece | titlecase}}
+                            {{produit.plante.genre | uppercase}} {{produit.plante.espece | titlecase}}
+                            <br>
+                            <span *ngIf="!produit.plante.gift" class="tiny">({{produit.option | translate}})</span>
                         </div>
                         <div class="qte">
                             <div class="setQte">
