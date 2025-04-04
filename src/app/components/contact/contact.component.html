@@ -4,7 +4,8 @@
         <div *ngIf="!!notif">{{notif}}</div>
         <form *ngIf="notif === ''" [formGroup]="f" (ngSubmit)="onSubmit()">
             <h2 class="h2contact">
-                {{ "form-contact" | translate }}</h2>
+                {{ "form-contact" | translate }}
+            </h2>
             <div>
                 <div class="rubrik">
                     <label for="nom">{{ "nom" | translate }}*</label>
@@ -38,8 +39,8 @@
                     <small *ngIf="f.get('message')?.errors?.['required']">{{ "required" | translate }}.</small>
                     <small *ngIf="f.get('message')?.errors?.['message']">{{ "trop-court" | translate }}.</small>
                 </div>
-                <div class="asterix">{{ "champs-oblig" | translate }}</div>
-                <div class="acceptTerms">
+                <div class="asterix tiny">{{ "champs-oblig" | translate }}</div>
+                <div class="acceptTerms tiny">
                     <input type="checkbox" formControlName="acceptTerms">
                     {{ 'case-rgpd'  | translate }}
                 </div>

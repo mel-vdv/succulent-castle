@@ -8,12 +8,21 @@ form {
         margin: 10px 0;
         display: flex;
         justify-content: space-between;
+        label {
+            width: 40%;
+        }
         input {
             all: unset;
             width: 60%;
             background-color: rgba(0,0,0,0.06);
             border-radius: 5px;
             padding: 5px 10px;
+            &#nom, &#country, &#ville {
+                text-transform: uppercase;
+            }
+            &#prenom {
+                text-transform: capitalize;
+            }
         }
     }
     .error {

@@ -74,7 +74,7 @@
     "objet": "Objet",
     "message": "Veuillez écrire votre message",
     "envoyer": "Envoyer",
-    "nous-tel": "Par téléphone",
+    "par-tel": "Par téléphone",
     "nous-ecrire": "Ecrivez-nous à l'adresse suivante:",
     "par-email": "Par email",
     "joignable": "Nous sommes joignables au:",
@@ -121,7 +121,7 @@
     "r2-1": "Dans des conditions normales, Les plantes sont expédiées dans les 48h. Le service de livraison national standard (Belgique) livre dans les 24/48 heures, et le service de messagerie international (Europe) livre dans les 5 à 7 jours.",
     "q2-2": "Puis-je modifier l'adresse de livraison une fois la commande expédiée ?",
     "r2-2": "Une fois votre commande expédiée, vous recevrez un SMS sur votre téléphone de la part de la société de messagerie. Vous pouvez utiliser ce message pour modifier l'adresse de livraison si elle se trouve dans votre ville et que la commande n'est pas encore en cours de livraison. Dans toutes les autres situations, si vous avez encore besoin d'aide, veuillez nous contacter à thesucculentcastle@gmail.com",
-    "theme-d": "Non classé",
+    "theme-d": "Autres",
     "q3-0": "Avez-vous un magasin physique ou un numéro de téléphone de contact ?",
     "r3-0": "Pour toute question ou demande de renseignements, veuillez nous contacter à thesucculentcastle@gmail.com",
 

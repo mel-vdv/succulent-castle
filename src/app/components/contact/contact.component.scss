@@ -2,10 +2,6 @@
     width: 100%;
     box-sizing: border-box;
     min-height: calc(100vh - 530px);
-    font-size: 18px;
-    background-image: url('/assets/fonds/fond-graphique-pink.jpg');
-    background-repeat: repeat;
-    background-size: contain;
 
     .contact {
         background-color: white;
@@ -20,7 +16,6 @@
             box-sizing: border-box;
             width: 100%;
             margin: auto;
-            font-size: 23px;
             padding: 20px 10px;
         }
 
@@ -34,13 +29,10 @@
             }
             input:not([type="checkbox"]), textarea {
                 all: unset;
-                background-color: rgba(31,28,28,0.1);
+                background-color: rgba(31,28,28,0.05);
                 color: #1f1c1c;
                 border-radius: 4px;
                 padding: 5px 10px;
-            }
-            input[type="checkbox"]{
-                accent-color: #363333;
             }
             input:not([type="checkbox"]) {
                 width: 60%;
@@ -63,14 +55,12 @@
             }
             .asterix{
                 font-style: italic;
-                font-size: 15px;
-                @media screen and (max-width:700px) {
-                    font-size: 12px;
-                }
             }
             .acceptTerms {
-                @media screen and (max-width:700px) {
-                    font-size: 12px;
+                input[type="checkbox"]{
+                    accent-color: rgb(216,16,86);
+                    width: 25px; height: 25px;
+                    position: relative; top: 4px;
                 }
             }
             .send  {
@@ -79,18 +69,18 @@
                 button {
                     all: unset;
                     color: white;
-                    background-color: #363333;
+                    background-color: rgb(216,16,86);
                     display: flex;
                     align-items: center;
-                    border: 1px solid  rgba(38,28,28,0.1);
-                    border-radius: 4px;
-                    padding: 5px;
+                    border-radius: 25px;
+                    padding: 10px 20px;
                     margin: auto;
                     &:hover:not(.invalid) {
                         font-weight: 600;
                     }
                     &.invalid {
                         background-color: rgba(38,28,28,0.1);
+                        border: 1px solid  rgba(38,28,28,0.1);
                         color: #1f1c1c;
                         color: #534c4c;
                     }
@@ -115,7 +105,7 @@
             box-sizing: border-box;
             padding: 20px;
             img[alt='reseaux']{
-                background-color: #1f1c1c;
+                background-color: rgb(216,16,86);
                 border-radius: 100%;
                 padding: 5px;
                 height: 30px;
@@ -125,9 +115,8 @@
         /****************/
         h2 {
             display: flex;
-            font-size: 24px;
             margin: 0;
-            color: #363333;
+            color: rgb(216,16,86)
             }
         img[alt='fleche'] {
             max-width: 30px;
@@ -143,7 +132,7 @@
             align-items: center;
             &:hover {
                 font-weight: bold;
-                background-color: #1f1c1c;
+                background-color: rgb(216,16,86);
                 color: white;
                 border-radius: 5px;
             }
