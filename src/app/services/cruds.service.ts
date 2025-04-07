@@ -1,6 +1,6 @@
 
 import { ObjetPanier } from './../interfaces/plante';
-import { Firestore, collection, doc, addDoc, updateDoc, arrayUnion, getDoc, arrayRemove, docData, onSnapshot} from '@angular/fire/firestore';
+import { Firestore, collection, doc, addDoc, updateDoc, arrayUnion, getDoc, arrayRemove, docData, onSnapshot, query, where, getDocs, deleteDoc} from '@angular/fire/firestore';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
 import { ObjetAddress } from '../interfaces/address';
@@ -61,7 +61,6 @@ export class CrudsService {
   }
   // update au panier : 
   updatePanier(uid: string, objetPanier: ObjetPanier[]) {
-    console.log('crud : on vide le panier');
     const documentRef = doc(this.firestore, `customers/${uid}`);
     return updateDoc(documentRef, {
       panier: objetPanier

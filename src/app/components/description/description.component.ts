@@ -2,6 +2,7 @@ import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { ActivatedRoute, Router } from '@angular/router';
+import { take } from 'rxjs';
 import { Plante } from 'src/app/interfaces/plante';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
@@ -119,16 +120,32 @@ export class DescriptionComponent implements OnInit {
 
   addPanier() {
     if(!!this.user?.uid) {
-      const objetPanier = {
-        plante: this.plante,
-        option: this.optionChoisie,
-        qte: Number(this.qte),
-        soustotal: Number(this.qte * this.plante.stock[this.optionChoisie]!.prix)
-      };
-      this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
+      this.verifDoublon(this.user!.uid!).then(() => {
+            const objetPanier = {
+              plante: this.plante,
+              option: this.optionChoisie,
+              qte: Number(this.qte),
+              soustotal: Number(this.qte * this.plante.stock[this.optionChoisie]!.prix)
+            };
+      console.log('ok on va add panier');
+      this.crud.addPanier(this.user!.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
+      })
+  
     }
     else {
       this.authServ.loginWithGoogle().subscribe();
     }
+  }
+
+  async verifDoublon(uid: string) {
+    console.log('verif doublons');
+    this.crud.getPanier(uid).pipe(take(1)).subscribe(panier => {
+      const bibi = panier.find(objetPanier => objetPanier.option === this.optionChoisie && objetPanier.plante.image === this.plante.image);
+      console.log('bibi', bibi);
+      if (!!bibi) {
+        this.crud.removePanier(uid, bibi).then(() => console.log('removed doublon'));
+      }
+    })
+
   }
 }
