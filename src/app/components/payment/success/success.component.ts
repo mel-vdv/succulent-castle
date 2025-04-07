@@ -1,9 +1,7 @@
-import { take } from 'rxjs';
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { Commande } from 'src/app/interfaces/commande';
-import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
 
@@ -16,44 +14,42 @@ export class SuccessComponent implements OnInit {
 
   user!: User | null;
   order!: Commande;
+  flag: boolean = false;
 
   constructor(
     private crud: CrudsService,
-    private authServ: AuthService,
     private router: Router,
     private ficheServ: FicheService
   ) { }
 
   ngOnInit(): void {
-    this.getUser();
-  }
-  
-  getUser() {
-    this.authServ.user$.subscribe((user) => {
-      this.user = user;
-      if (!!user?.uid) this.addOrder(user.uid);
-    });
+    console.log('init');
+    if (this.ficheServ.getIsOrdered() || this.ficheServ.getIsOrdering() ) {
+      console.log('HEEEEELAAAAAA');
+      return;
+    }
+    else this.addOrder();
   }
 
-  addOrder(uid: string) {
-    this.crud.getPanier(uid)
-    .pipe(take(1))
-    .subscribe(data => {
-      const objetCommande: Commande = {
-        panier: data,
-        date: Date.now(),
-        etat : "preparation",
-        total: 166,
-        adresse: this.ficheServ.getAddress()!
-      }
-      // on ajoute la commande dans "commandes" de la bdd
-      this.crud.addOrder(uid, objetCommande).then(() => {
-        // puis on vide la panier :
-        this.crud.updatePanier(uid, []);
-        this.ficheServ.setNotif("success-order-notif");
-        this.router.navigate(['/account']);
-      });
-    });
+  addOrder() {
+    console.log("add order");
+    this.ficheServ.setIsOrdering(true);
+    const objetCommande = this.ficheServ.getObjetCommande();
+    const uid = this.ficheServ.getUid()!;
+    // on ajoute la commande dans "commandes" de la bdd
+    this.crud.addOrder(uid, objetCommande!).then(() => {
+      // flag : 
+      this.ficheServ.setIsOrdered(true);
+      this.ficheServ.setIsOrdering(false);
+      // puis on vide le panier :
+      this.crud.updatePanier(uid, []);
+      // puis le service :
+      this.ficheServ.setNotif("success-order-notif");
+      this.ficheServ.setObjetCommande(undefined);
+      // puis redirection
+      this.router.navigate(['/account']);
+    })
+    .catch(err => this.ficheServ.setIsOrdering(false));
   }
 
 }

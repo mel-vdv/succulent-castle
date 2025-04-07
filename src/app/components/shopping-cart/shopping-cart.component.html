@@ -53,7 +53,7 @@
                 </div>
             </div>
         </div>
-        <div *ngIf="!(panier$|async)?.length">
+        <div *ngIf="!(panier$|async)?.length" class="vide">
             {{"no-panier" | translate}}
         </div>
     </div>

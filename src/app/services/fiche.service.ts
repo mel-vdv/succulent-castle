@@ -1,6 +1,7 @@
 import { Injectable } from '@angular/core';
 import { Plante } from '../interfaces/plante';
 import { ObjetAddress } from '../interfaces/address';
+import { Commande } from '../interfaces/commande';
 
 @Injectable({
   providedIn: 'root'
@@ -12,9 +13,13 @@ export class FicheService {
 
   plante?: Plante;
   gift?: Plante;
-  address?: ObjetAddress;
+  uid?: string;
+  //address?: ObjetAddress;
+  commande?: Commande;
   panierLength: number = 0;
   notif: string = "";
+  isOrdered: boolean = false;
+  isOrdering: boolean = false;
 
   setPlante(plante: Plante) {
     this.plante = plante;
@@ -36,11 +41,34 @@ export class FicheService {
   getNotif(): string {
     return this.notif;
   }
+  setUid(uid: string): void {
+    this.uid = uid;
+  }
 
-  setAddress(address: ObjetAddress) {
-    this.address = address;
+  getUid(): string | undefined {
+    return this.uid;
   }
-  getAddress(): ObjetAddress | undefined{
-    return this.address;
+  
+  setObjetCommande(objetCommande: Commande | undefined): void {
+    this.commande = objetCommande;
   }
+
+  getObjetCommande(): Commande | undefined {
+    return this.commande;
+  }
+
+  getIsOrdering(): boolean {
+    return this.isOrdering;
+  }
+  getIsOrdered(): boolean {
+    return this.isOrdered;
+  }
+  setIsOrdering(value: boolean):void {
+    this.isOrdering = value;
+  }
+  setIsOrdered(value: boolean):void {
+    this.isOrdered = value;
+  }
+
+
 }

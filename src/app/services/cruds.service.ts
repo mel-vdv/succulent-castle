@@ -61,6 +61,7 @@ export class CrudsService {
   }
   // update au panier : 
   updatePanier(uid: string, objetPanier: ObjetPanier[]) {
+    console.log('crud : on vide le panier');
     const documentRef = doc(this.firestore, `customers/${uid}`);
     return updateDoc(documentRef, {
       panier: objetPanier

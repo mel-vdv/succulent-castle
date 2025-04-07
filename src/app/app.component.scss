@@ -69,4 +69,9 @@ body {
         font-size: 16px;
     }
 }
+::ng-deep .vide {
+    text-align: center;
+    padding-top: 100px;
+    text-transform: uppercase;
+}
 

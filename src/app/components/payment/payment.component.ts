@@ -1,7 +1,7 @@
 import { Router } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { Firestore, collection, addDoc, onSnapshot } from '@angular/fire/firestore';
-import { Observable } from 'rxjs';
+import { Observable, take } from 'rxjs';
 import { bonReduc } from 'src/app/constantes/reduc';
 import { ObjetPanier } from 'src/app/interfaces/plante';
 import { CrudsService } from 'src/app/services/cruds.service';
@@ -102,6 +102,7 @@ export class PaymentComponent implements OnInit {
     const toBelgium = pays.toLowerCase() === 'belgique';
     const onlyGrains = this.isNotOnlyGrains;
     this.fraisLivr = this.bpost.calcul(onlyGrains, toBelgium);
+    this.getTotalFinal();
     this.boutonPayerInactif = false;
   }
 
@@ -116,8 +117,23 @@ export class PaymentComponent implements OnInit {
   ///////////////////////////////////////////
 
   async payer(): Promise<void> {
-    this.ficheServ.setAddress(this.address!);
-    this.router.navigate(['payment/success']);
+    this.panier$!.pipe(take(1)).subscribe(data => {
+      if (!!data) {
+        this.ficheServ.setUid(this.user!.uid);
+        this.ficheServ.setObjetCommande( 
+        {
+        panier: data,
+        total: this.tot,
+        date: Date.now(),
+        etat: 'preparation',
+        adresse: this.address!
+        });
+        this.router.navigate(['payment/success']);
+      }
+    });
+  }
+
+    
     /*
     const checkoutSessionsRef = collection(
       this.firestore,
@@ -140,6 +156,6 @@ export class PaymentComponent implements OnInit {
       }
     });
     */
-  }
+  
 
 }

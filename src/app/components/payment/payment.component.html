@@ -19,7 +19,7 @@
                 <div class="stripe">
                     <h1>{{ "paymenth1" | translate }}</h1>
                     <p>{{ "payment-p" | translate }}</p>
-                    <button [class.inactif]="boutonPayerInactif" (click)="goStripe()">{{'payer'|translate}}</button>
+                    <button [class.inactif]="boutonPayerInactif || !user" (click)="goStripe()">{{'payer'|translate}}</button>
                 </div>
             </div>
             <div class="recap">

@@ -31,8 +31,14 @@ notif?: string;
    }
 
   ngOnInit(): void {
-   this.getUser();
-   this.getNotif();
+    this.cleanFlags();
+    this.getUser();
+    this.getNotif();
+  }
+
+  cleanFlags() {
+    this.ficheServ.setIsOrdering(false);
+    this.ficheServ.setIsOrdered(false);
   }
 
   getNotif() {
