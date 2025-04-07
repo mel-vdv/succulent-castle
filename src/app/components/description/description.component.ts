@@ -127,7 +127,6 @@ export class DescriptionComponent implements OnInit {
               qte: Number(this.qte),
               soustotal: Number(this.qte * this.plante.stock[this.optionChoisie]!.prix)
             };
-      console.log('ok on va add panier');
       this.crud.addPanier(this.user!.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
       })
   
@@ -138,10 +137,8 @@ export class DescriptionComponent implements OnInit {
   }
 
   async verifDoublon(uid: string) {
-    console.log('verif doublons');
     this.crud.getPanier(uid).pipe(take(1)).subscribe(panier => {
       const bibi = panier.find(objetPanier => objetPanier.option === this.optionChoisie && objetPanier.plante.image === this.plante.image);
-      console.log('bibi', bibi);
       if (!!bibi) {
         this.crud.removePanier(uid, bibi).then(() => console.log('removed doublon'));
       }

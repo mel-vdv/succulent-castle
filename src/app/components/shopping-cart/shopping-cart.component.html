@@ -27,9 +27,17 @@
                         </div>
                         <div class="qte">
                             <div class="setQte">
-                                <div class="plus" [class.grise]="produit.qte < 2" (click)="setQte(-1,i)">-</div>
+                                <div class="plus" 
+                                [class.grise]="produit.qte < 2"
+                                (click)="produit.qte > 1 && setQte(-1,i)">
+                                    -
+                                </div>
                                 <div>{{produit.qte}}</div>
-                                <div class="plus" (click)="setQte(1,i)">+</div>
+                                <div class="plus" 
+                                [class.grise]="produit.qte >= produit.plante.stock[produit.option]!.dispo"
+                                (click)="produit.qte < produit.plante.stock[produit.option]!.dispo && setQte(1,i)">
+                                    +
+                                </div>
                             </div>
                             <div class="trash" (click)="trash(produit)">
                                 <img src="assets/icons/trash.svg" alt="trash">

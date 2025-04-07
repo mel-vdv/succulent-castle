@@ -31,9 +31,17 @@
             <div class="qte">
                 <div class="tiny">{{"qte"|translate}}</div>
                 <div class="setQte">
-                    <div class="plus" [class.grise]="qte < 2" (click)="setQte(-1)">-</div>
+                    <div class="plus" 
+                    [class.grise]="qte < 2" 
+                    (click)="qte > 1 && setQte(-1)">
+                        -
+                    </div>
                     <div>{{qte}}</div>
-                    <div class="plus" (click)="setQte(1)">+</div>
+                    <div class="plus" 
+                    [class.grise]="qte >= plante.stock[optionChoisie]!.dispo" 
+                    (click)="qte < plante.stock[optionChoisie]!.dispo && setQte(1)">
+                        +
+                    </div>
                 </div>
             </div>
             <div class="addPanier">
