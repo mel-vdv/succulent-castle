@@ -1,4 +1,4 @@
-import { Component, Input, OnInit, SimpleChanges } from '@angular/core';
+import { Component, Input, OnChanges, OnInit, Output, SimpleChanges, EventEmitter } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { FormControl, FormGroup, Validators } from '@angular/forms';
 import { ObjetAddress } from 'src/app/interfaces/address';
@@ -10,11 +10,12 @@ import { CrudsService } from 'src/app/services/cruds.service';
   templateUrl: './delivery.component.html',
   styleUrls: ['./delivery.component.scss']
 })
-export class DeliveryComponent implements OnInit {
+export class DeliveryComponent implements OnInit, OnChanges {
 
   user!: User | null;
   @Input()address2?: ObjetAddress;
   f: FormGroup;
+  @Output()countrySelect = new EventEmitter<string>();
   edit?: boolean;
 
   constructor(
@@ -42,6 +43,10 @@ export class DeliveryComponent implements OnInit {
       this.getValue();
     }
   }
+
+  changeCountry(pays: string) {
+    this.countrySelect.emit(pays);
+  }
   
 
   editer() {
@@ -65,6 +70,7 @@ export class DeliveryComponent implements OnInit {
         {
           this.address2 = this.f.value;
           this.edit = false;
+          this.changeCountry(this.f.get('country')?.value);
         });
     }
     else {

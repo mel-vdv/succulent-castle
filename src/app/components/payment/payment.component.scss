@@ -41,8 +41,11 @@
                         padding: 10px 20px;
                         display: block;
                         margin: 10px auto;
-                        &:hover {
+                        &:hover:not(.inactif) {
                             font-weight: bold;
+                        }
+                        &.inactif {
+                            background-color: rgba(216,16,86,0.3);
                         }
                     }
                 }
@@ -53,7 +56,7 @@
                     display: flex; align-items: center; justify-content: space-between;
                     width: 450px;
                     img[alt='miniature'] {
-                        height: 100px;
+                        height: 150px;
                         border-radius: 10px;
                         margin-right: 10px;
                     }
@@ -86,6 +89,11 @@
                         color: white;
                         background-color: rgb(216,16,86);
                         margin-left: 5px;
+                    }
+                }
+                .expedition {
+                    button {
+                        margin: 0 5px;
                     }
                 }
                 div {

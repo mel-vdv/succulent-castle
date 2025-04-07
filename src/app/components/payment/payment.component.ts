@@ -8,6 +8,8 @@ import { CrudsService } from 'src/app/services/cruds.service';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
 import { ObjetAddress } from 'src/app/interfaces/address';
+import { BpostService } from 'src/app/services/bpost.service';
+import { FicheService } from 'src/app/services/fiche.service';
 
 
 @Component({
@@ -24,20 +26,24 @@ export class PaymentComponent implements OnInit {
   panier$!: Observable<ObjetPanier[] | null> | null;
   user!: User | null;
   address?: ObjetAddress;
+  boutonPayerInactif: boolean = true;
 
   bonReduc: string = "";
   soustot: number = 0;
-  fraisLivr: number = 12;
+  fraisLivr: number = 0;
   tot: number = 0;
   tva: string = "";
   panierLength: number = 0;
+  isNotOnlyGrains: boolean = false;
 
   constructor(
     private firestore: Firestore,
     private crud: CrudsService,
     private router: Router,
-    private authServ: AuthService
-  ) { }
+    private authServ: AuthService,
+    private bpost: BpostService,
+    private ficheServ: FicheService
+    ) { }
 
   ngOnInit(): void {
     this.getUser();
@@ -55,7 +61,10 @@ export class PaymentComponent implements OnInit {
   }
 
   getAddress(uid: string) {
-    this.crud.getAddress(uid).then( add => this.address = add ?? undefined)
+    this.crud.getAddress(uid).then( add => {
+      this.address = add ?? undefined;
+      if (!!this.address) this.calculFraisEnvoi(this.address.country);
+    })
   }
 
   getPanier() {
@@ -64,15 +73,19 @@ export class PaymentComponent implements OnInit {
       this.soustot = data.reduce((acc: number,item: ObjetPanier) => acc + (item.soustotal || 0), 0);
       this.getTva();
       this.getTotalFinal();
+      this.isNotOnlyGrains = this.getNotOnlyGrains(data);
       this.panierLength = data?.length ?? 0;
     });
   }
+
   getTva() {
     this.tva = (this.soustot - this.soustot / 1.20).toFixed(2);
   }
+
   getTotalFinal() {
     this.tot = this.soustot + this.fraisLivr;
   }
+
   applyReduc() {
     if(this.bonReduc === bonReduc.code) {
       this.soustot -= (this.soustot * bonReduc.pourcent / 100);
@@ -80,12 +93,22 @@ export class PaymentComponent implements OnInit {
       this.getTotalFinal();
     }
   }
-  infoExped(){
 
+  getNotOnlyGrains(panier: any) {
+    return panier.filter((objetPanier:any) => objetPanier.option !== 'g')?.length;
   }
+
+  calculFraisEnvoi(pays: string){
+    const toBelgium = pays.toLowerCase() === 'belgique';
+    const onlyGrains = this.isNotOnlyGrains;
+    this.fraisLivr = this.bpost.calcul(onlyGrains, toBelgium);
+    this.boutonPayerInactif = false;
+  }
+
   goPanier() {
     this.router.navigate(['/shopping-cart']);
   }
+
   goStripe() {
     if (!!this.user?.uid) this.payer().catch(console.error);
     else this.authServ.loginWithGoogle();
@@ -93,6 +116,9 @@ export class PaymentComponent implements OnInit {
   ///////////////////////////////////////////
 
   async payer(): Promise<void> {
+    this.ficheServ.setAddress(this.address!);
+    this.router.navigate(['payment/success']);
+    /*
     const checkoutSessionsRef = collection(
       this.firestore,
       'customers',
@@ -113,7 +139,7 @@ export class PaymentComponent implements OnInit {
         window.location.assign(data['url']);
       }
     });
-
+    */
   }
 
 }

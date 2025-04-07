@@ -44,8 +44,11 @@ export class SuccessComponent implements OnInit {
         date: Date.now(),
         etat : "preparation",
         total: 166,
+        adresse: this.ficheServ.getAddress()!
       }
+      // on ajoute la commande dans "commandes" de la bdd
       this.crud.addOrder(uid, objetCommande).then(() => {
+        // puis on vide la panier :
         this.crud.updatePanier(uid, []);
         this.ficheServ.setNotif("success-order-notif");
         this.router.navigate(['/account']);

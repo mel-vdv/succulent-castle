@@ -141,7 +141,7 @@
 
     "speech-home": "Bienvenue dans ma pépinière Succulent Castle<br><br><br> Une grande maison pleine de lumière, lentement métamorphosée en jungle futuriste pour plantes grasses en quête de conquête. <br>Ici, ce ne sont pas de simples « plantes vertes » qui poussent, mais des créatures robustes, colorées, presque magiques. <br>  Chaque jour, je veille à ce qu’elles deviennent plus belles, plus audacieuses, plus éclatantes. Rouge flamboyant, violet cosmique, jaune solaire, bleu électrique… Elles déclinent toutes les couleurs de l’arc-en-ciel, comme autant de promesses d'originalité et d’évasion. Résilientes et exotiques, les succulentes sont les stars de ce monde à part — des plantes qui n’ont pas peur de briller, même quand tout s’assèche autour. <br><br> Je me suis procuré des boutures en provenance d'Espagne, Suède, Italie, Portugal... et des graines d'espèces rares issues de la Californie ou Alabama. Je les reproduis localement, en Belgique. <br> <br> Et pour sublimer leur éclat : des créations originales, entre poésie et curiosité :  Coffres-forts réinventés, objets chinés, terrariums miniatures… Chaque composition est pensée pour éveiller l’imaginaire et inviter un bout de rêve végétal dans votre intérieur. <br><br> Ici, la nature se fait spectacle, et chaque plante raconte une histoire.",
 
-    "no-favo": "Pas de favoris",
+    "no-favoris": "Pas de favoris",
     "no-histo": "Pas d'historique de commandes",
     "no-panier": "Panier vide",
 
@@ -158,5 +158,11 @@
 
 
     "gift1.png-d":"En achetant ce kit, vous recevrez une précieuse Echeveria setosa f. cristata, une Echeveria chihuahuaensis et une Senecio peregrinus Dolphins; un senecio retombant dont les feuilles ressemblent à de petits dauphins.<br> Vous recevrez également un tiroir en bois (hauteur 10 cm, largeur 10 cm et longueur 20 cm). Le tiroir est doublé de plastique et n’est pas perforé car il est conçu pour votre maison, vos meubles ne seront pas mouillés avec cet aménagement. Arrosez vos plantes avec parcimonie et amour.<br><br> Un terreau spécial pour succulentes et du gravier sont également inclus dans le kit. <br><br>Les echeverias doivent être arrosés régulièrement en été, car ils ont besoin d’un sol très drainant. La plupart des Echeverias sont très résistants aux températures proches du gel. Si elles sont retirées à l’intérieur en hiver, elles ont besoin d’être arrosées. Placez-les toujours près de la lumière ! Il existe de nombreuses variétés avec des couleurs et des formes de feuilles différentes. Si vous les gardez à l’intérieur et qu’elles changent de couleur, c’est qu’elles ont besoin de plus de lumière.<br>Les variétés de plantes succulentes fournies dans cet arrangement peuvent varier en fonction de la saison ou de la disponibilité. <br><br>Vous voulez voir comment créer votre propre composition?",
-    "gift2.png-d": "Apportez une touche de nature à votre intérieur avec ce magnifique terrarium composé de plantes grasses (succulentes) faciles d’entretien. <br><br>Installées dans un joli contenant en verre transparent avec gravier décoratif et substrat adapté, ces plantes demandent très peu d’arrosage et s’épanouissent en pleine lumière. <br><br>Parfait pour un bureau, une table basse ou en cadeau original !Dimensions : 25 cm de diamètre environ."
+    "gift2.png-d": "Apportez une touche de nature à votre intérieur avec ce magnifique terrarium composé de plantes grasses (succulentes) faciles d’entretien. <br><br>Installées dans un joli contenant en verre transparent avec gravier décoratif et substrat adapté, ces plantes demandent très peu d’arrosage et s’épanouissent en pleine lumière. <br><br>Parfait pour un bureau, une table basse ou en cadeau original !Dimensions : 25 cm de diamètre environ.",
+
+    "preparation": "En cours de préparation",
+    "expédié": "Colis expédié",
+
+    "sent-to": "Envoyé à l'adresse suivante"
+
 }

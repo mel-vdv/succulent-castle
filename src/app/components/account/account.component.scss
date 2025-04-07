@@ -2,6 +2,7 @@
     min-height: calc(100vh - 530px);
     box-sizing: border-box;
     .account {
+        width: min(100vw, 1600px);
         button {
             all: unset;
             color: rgb(216,16,86);
@@ -23,12 +24,19 @@
             padding: 20px;
         }
         .details {
-            display: flex;
+            display: flex; flex-wrap: wrap;
             width: 100%;
-            app-orders, app-delivery {
-                width: 50%;
+            app-delivery {
+                width: 30%;
             }   
             app-orders {
+                width: 70%;
+            }
+            
+            @media screen and (max-width:700px) {
+                app-orders, app-delivery {
+                    width: 100%;
+                }
             }
         }
         .noLoggin {

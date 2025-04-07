@@ -13,7 +13,7 @@
                 <div class="esp">{{plante.espece | titlecase }}</div>
             </div>
             <div class="tarif">
-                {{plante.stock.p.prix | virgule }} € EUR
+                {{ plante.stock[optionChoisie]!.prix | virgule }} € EUR
                 <div class="tva tiny">{{ 'taxes-frais' | translate }}</div>
             </div>
             <div class="option">

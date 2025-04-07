@@ -4,7 +4,7 @@
         <div class="adresse" *ngIf="edit !== true && !!address2">
             {{address2.prenom |titlecase }} {{address2.nom | uppercase}} <br>
             {{address2.adres}} <br>
-            {{address2.compl}} <br>
+            {{address2.compl}} <br *ngIf="!!address2.compl">
             {{address2.cp}} {{address2.ville | uppercase}} <br>
             {{address2.country | uppercase}} <br>
             <button (click)="edit = true">{{'modify-address' | translate }}</button>

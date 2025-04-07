@@ -5,5 +5,5 @@ export interface Commande {
     total: number;
     date: number;
     etat: string;
-    adresse?: ObjetAddress;
+    adresse: ObjetAddress;
 }

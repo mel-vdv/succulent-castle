@@ -11,6 +11,7 @@ export class OrdersComponent implements OnInit {
 
     user!: User | null;
     @Input()orders?: Commande[];
+    detailsVisible:number = -1;
 
   constructor(
   ) { }

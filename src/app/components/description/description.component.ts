@@ -24,8 +24,8 @@ export class DescriptionComponent implements OnInit {
   sharing: boolean = false;
   shareUrl: string ="";
 
-  options: string[] = [];
-  optionChoisie: string="";
+  options: (keyof Plante['stock'])[] = [];
+  optionChoisie: keyof Plante['stock'] = 'p';
   optionsVisibles: boolean = false;
 
   constructor(
@@ -123,7 +123,7 @@ export class DescriptionComponent implements OnInit {
         plante: this.plante,
         option: this.optionChoisie,
         qte: Number(this.qte),
-        soustotal: Number(this.qte * this.plante.stock.p.prix)
+        soustotal: Number(this.qte * this.plante.stock[this.optionChoisie]!.prix)
       };
       this.crud.addPanier(this.user.uid, objetPanier).then(()=> this.router.navigate(['/shopping-cart']));
     }

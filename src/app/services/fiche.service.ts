@@ -1,5 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Plante } from '../interfaces/plante';
+import { ObjetAddress } from '../interfaces/address';
 
 @Injectable({
   providedIn: 'root'
@@ -11,6 +12,7 @@ export class FicheService {
 
   plante?: Plante;
   gift?: Plante;
+  address?: ObjetAddress;
   panierLength: number = 0;
   notif: string = "";
 
@@ -33,5 +35,12 @@ export class FicheService {
   }
   getNotif(): string {
     return this.notif;
+  }
+
+  setAddress(address: ObjetAddress) {
+    this.address = address;
+  }
+  getAddress(): ObjetAddress | undefined{
+    return this.address;
   }
 }

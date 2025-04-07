@@ -1,21 +1,53 @@
 <div class="orders">
-
     <h1>{{'histo-commandes' | translate }}</h1>
     <div class="liste" *ngIf="orders?.length else noHisto">
         <div class="case" *ngFor="let ord of orders; let i = index;">
-            {{ord.etat}}
-            {{ord.date}}
-            Total  € {{ord.total | virgule}} EUR
-            <div *ngFor="let ligne of ord.panier">
-                <div>
-                    <img [src]="'assets/PHOTOS SUCCULENTES/' + ligne.plante.image" alt="miniature">
+            <div class="resume">
+                <div class="date">{{ord.date | date }}</div>
+                <div class="montant">€ {{ord.total | virgule}} EUR</div>
+                <div class="etat">{{ord.etat | translate }}</div>
+                <div class="masquer" *ngIf="detailsVisible !== i" (click)="detailsVisible = i">
+                    <img src="assets/icons/loupe+.svg" alt="icon loupe">
                 </div>
-                <div>{{ligne.plante.genre | uppercase}} {{ligne.plante.espece | titlecase}} </div>
-                <div>{{ligne.plante.stock.p.prix }} x {{ligne.qte}} = {{ligne.soustotal}} €</div>
+                <div class="masquer" *ngIf="detailsVisible === i" (click)="detailsVisible = -1">
+                    <img src="assets/icons/loupe-.svg" alt="icon loupe">
+                </div>
+            </div>
+            
+            <div class="details" *ngIf="detailsVisible === i">
+                <div class="detailOrder" *ngFor="let ligne of ord.panier">
+                    <div>
+                        <img [src]="'assets/PHOTOS/' + ligne.plante.image" alt="miniature">
+                    </div>
+                    <div>
+                        <span class="bold">{{ligne.plante.genre | uppercase}}</span>
+                        <br>
+                        {{ligne.plante.espece | titlecase}} 
+                        <br>
+                        <span class="tiny">({{ligne.option | translate}})</span>
+                    </div>
+                    <div class="montantDetail">
+                        <div>{{ligne.plante.stock.p.prix }}</div>
+                        <div>x {{ligne.qte}}</div>
+                        <div>= {{ligne.soustotal}} €</div>
+                    </div>
+                </div>
+                <div class="total">
+                    TOTAL : EUR {{ord.total | virgule}}€
+                </div>
+                <div class="envoi">
+                    {{'sent-to' | translate }}:
+                    <div class="adresse">
+                        {{ord.adresse.prenom |titlecase }} {{ord.adresse.nom | uppercase}} <br>
+                        {{ord.adresse.adres}} <br>
+                        {{ord.adresse.compl}} <br *ngIf="!!ord.adresse.compl">
+                        {{ord.adresse.cp}} {{ord.adresse.ville | uppercase}} <br>
+                        {{ord.adresse.country | uppercase}}
+                    </div>
+                </div>
             </div>
         </div>
     </div>
-
     <ng-template class="vide" #noHisto>
         <div class="vide">
             {{"no-histo" | translate | uppercase}}
