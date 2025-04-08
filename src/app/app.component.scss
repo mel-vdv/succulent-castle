@@ -6,14 +6,15 @@
 }
 
 body {
-    width: 100vw;
-    height: calc(var(--vh, 1vh) * 100);//100vh;
-    position: fixed;//absolute;
+    width: 100vw; box-sizing: border-box;
+    height: calc(var(--vh, 1vh) * 100);
+    position: fixed;
     top: 0;
     left: 0;
     padding: 0;
     margin: 0;
     overflow: auto;
+    overflow-x: hidden;
     scrollbar-width: none;
     -ms-overflow-style: none;
     font-size: 24px;

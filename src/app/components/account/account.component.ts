@@ -1,5 +1,5 @@
 import { CrudsService } from 'src/app/services/cruds.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
 import { ObjetAddress } from 'src/app/interfaces/address';
@@ -7,19 +7,21 @@ import { Commande } from 'src/app/interfaces/commande';
 import { ActivatedRoute } from '@angular/router';
 import { FicheService } from 'src/app/services/fiche.service';
 import { TranslateService } from '@ngx-translate/core';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-account',
   templateUrl: './account.component.html',
   styleUrls: ['./account.component.scss']
 })
-export class AccountComponent implements OnInit {
+export class AccountComponent implements OnInit, OnDestroy {
 
 
 user!: User | null;
 address?: ObjetAddress;
 orders?: Commande[];
 notif?: string;
+authSub!: Subscription;
 
   constructor(
     private authServ: AuthService,
@@ -42,13 +44,12 @@ notif?: string;
   }
 
   getNotif() {
-    const notifkey = this.ficheServ.getNotif();
-    this.translate.get(notifkey).subscribe((res: string) => this.notif = res);
+    this.notif = this.ficheServ.getNotif();
   }
 
   
   getUser() {
-    this.authServ.user$.subscribe((user) => {
+    this.authSub = this.authServ.user$.subscribe((user) => {
       this.user = user;
       if (!!user?.uid) {
         this.getAddress(user.uid);
@@ -75,6 +76,12 @@ notif?: string;
   }
 
   deco() {
-    this.authServ.logout().subscribe(() => this.user = null);
+    this.authServ.logout().subscribe((result) => {
+      console.log('result', result);
+    });
+  }
+  /********************************* */
+  ngOnDestroy(): void {
+    this.authSub.unsubscribe();
   }
 }

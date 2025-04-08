@@ -27,6 +27,7 @@
             }
             &.mobile {
                 position: relative;
+                z-index: 10;
                 div {
                     gap: 0; 
                 }

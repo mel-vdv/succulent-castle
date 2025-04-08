@@ -1,6 +1,7 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, OnDestroy } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { Router } from '@angular/router';
+import { Subscription, take } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 
@@ -9,11 +10,12 @@ import { CrudsService } from 'src/app/services/cruds.service';
   templateUrl: './navig.component.html',
   styleUrls: ['./navig.component.scss']
 })
-export class NavigComponent implements OnInit {
+export class NavigComponent implements OnInit, OnDestroy {
 
   user!: User | null;
   panierLength: number = 0;
   menuOpened = false;
+  authSub!: Subscription;
 
   constructor(
     private authServ : AuthService,
@@ -27,7 +29,8 @@ export class NavigComponent implements OnInit {
   }
 
   getUser() {
-    this.authServ.user$.subscribe((user) => {
+    this.authSub = this.authServ.user$.subscribe((user) => {
+      console.log('get ser...', user?.uid);
       this.user = user;
       this.getPanierLength();
     });
@@ -35,7 +38,7 @@ export class NavigComponent implements OnInit {
 
   getPanierLength() {
     if(!!this.user?.uid) {   
-      this.crud.getPanier(this.user!.uid).subscribe((data:any) => {
+      this.crud.getPanier(this.user!.uid).pipe(take(1)).subscribe((data:any) => {
       this.panierLength = data?.length ?? 0;
       });
     }
@@ -43,10 +46,15 @@ export class NavigComponent implements OnInit {
   }
 
   deco() {
-    this.authServ.logout().subscribe(() => console.log('deco'));
+    this.authServ.logout().pipe(take(1)).subscribe();
   }
 
   co() {
-    this.authServ.loginWithGoogle().subscribe(()=> console.log('co'));
+    this.authServ.loginWithGoogle().pipe(take(1)).subscribe();
   }
+
+  ngOnDestroy(): void {
+    if(this.authSub) this.authSub.unsubscribe();
+  }
+
 }

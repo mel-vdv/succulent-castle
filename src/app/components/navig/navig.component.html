@@ -59,7 +59,12 @@
                 </div>
                 <img src="assets/icons/cart.svg" alt="icons">
             </div>
-
+            <!--------->
+            <div routerLink="/account" *ngIf="!user">
+                <img src="assets/icons/profil.svg" alt="icons">
+                <em>{{"se-co"|translate}}</em>
+            </div>
+            <!-------->
             <div routerLink="/account" *ngIf="!!user">
                 <img src="assets/icons/profil.svg" alt="icons">
                 <em>{{"account"|translate}}</em>
@@ -70,10 +75,6 @@
                 <em>{{"déco"|translate}}</em>
             </div>
 
-            <div (click)="co()" *ngIf="!user">
-                <img src="assets/icons/profil.svg" alt="icons">
-                <em>{{"se-co"|translate}}</em>
-            </div>
 
         </div>
     </div>

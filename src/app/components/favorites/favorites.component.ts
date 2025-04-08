@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { Router } from '@angular/router';
 import { Plante } from 'src/app/interfaces/plante';
@@ -7,15 +7,17 @@ import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
 import listePlantes from 'src/assets/listes/liste-plantes.json';
 import listeGifts from 'src/assets/listes/liste-gifts.json';
+import { Subscription } from 'rxjs';
 
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.scss']
 })
-export class FavoritesComponent implements OnInit {
+export class FavoritesComponent implements OnInit, OnDestroy {
 
   user!: User | null;
+  authSub!: Subscription;
   favoris?: Promise<string[]>
   plantes: Plante[] = [];
   gifts: Plante[] = [];
@@ -32,22 +34,22 @@ export class FavoritesComponent implements OnInit {
   }
   
   getUser() {
-    this.authServ.user$.subscribe((user) => {
-      this.user = user;
-      this.getFav();
+    this.authSub = this.authServ.user$.subscribe((user:any) => {
+      if(!!user?.uid) {
+        this.user = user;
+        this.getFav(user.uid);
+      }
+      else this.router.navigate(['/account']);
     });
   }
 
   //FAVORIS :
-  getFav() {
-    if (!!this.user?.uid) {
-      this.favoris = this.crud.getFavoris(this.user.uid);
+  getFav(uid: string) {
+      this.favoris = this.crud.getFavoris(uid);
       this.favoris?.then((f:string[])=> {
         this.gifts = listeGifts.filter( (pl:Plante) => f.includes(pl.image));
         this.plantes = listePlantes.filter( (pl:Plante) => f.includes(pl.image));
       });
-    }
-    else this.authServ.loginWithGoogle().subscribe();
   }
 
   removeFav(fav: string, groupe?: string) {
@@ -68,6 +70,11 @@ export class FavoritesComponent implements OnInit {
   navig(plante: Plante) {
     this.ficheServ.setPlante(plante);
     this.router.navigate([`description/${plante.image}/f`]);
+  }
+
+  //************** */
+  ngOnDestroy(): void {
+    if (this.authSub) this.authSub.unsubscribe();
   }
 
 }

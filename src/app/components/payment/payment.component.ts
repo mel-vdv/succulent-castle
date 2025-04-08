@@ -1,15 +1,17 @@
 import { Router } from '@angular/router';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Firestore, collection, addDoc, onSnapshot } from '@angular/fire/firestore';
-import { Observable, take } from 'rxjs';
-import { bonReduc } from 'src/app/constantes/reduc';
-import { ObjetPanier } from 'src/app/interfaces/plante';
-import { CrudsService } from 'src/app/services/cruds.service';
-import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
+import { Observable, Subscription, take } from 'rxjs';
+import { bonReduc } from 'src/app/constantes/reduc';
+
 import { ObjetAddress } from 'src/app/interfaces/address';
+import { ObjetPanier } from 'src/app/interfaces/plante';
+
 import { BpostService } from 'src/app/services/bpost.service';
 import { FicheService } from 'src/app/services/fiche.service';
+import { CrudsService } from 'src/app/services/cruds.service';
+import { AuthService } from 'src/app/services/auth.service';
 
 
 @Component({
@@ -17,7 +19,7 @@ import { FicheService } from 'src/app/services/fiche.service';
   templateUrl: './payment.component.html',
   styleUrls: ['./payment.component.scss']
 })
-export class PaymentComponent implements OnInit {
+export class PaymentComponent implements OnInit, OnDestroy {
 
 
   priceId = "price_1R927tRoPmxQNFK8TU4181mU";
@@ -25,6 +27,7 @@ export class PaymentComponent implements OnInit {
 
   panier$!: Observable<ObjetPanier[] | null> | null;
   user!: User | null;
+  authSub!: Subscription;
   address?: ObjetAddress;
   boutonPayerInactif: boolean = true;
 
@@ -50,7 +53,7 @@ export class PaymentComponent implements OnInit {
   }
 
   getUser() {
-    this.authServ.user$.subscribe((user:any) => {
+    this.authSub = this.authServ.user$.subscribe((user:any) => {
       if(!!user?.uid) {
         this.user = user;
         this.getPanier();
@@ -117,10 +120,11 @@ export class PaymentComponent implements OnInit {
   ///////////////////////////////////////////
 
   async payer(): Promise<void> {
-    this.panier$!.pipe(take(1)).subscribe(data => {
+    
+    this.panier$!.pipe(take(1)).subscribe(async data => {
       if (!!data) {
         this.ficheServ.setUid(this.user!.uid);
-        this.ficheServ.setObjetCommande( 
+        this.ficheServ.setObjetCommande(
         {
         panier: data,
         total: this.tot,
@@ -130,32 +134,32 @@ export class PaymentComponent implements OnInit {
         });
         this.router.navigate(['payment/success']);
       }
+
+      const checkoutSessionsRef = collection(
+        this.firestore,
+        'customers',
+        this.user!.uid,
+        'checkout_sessions'
+      );
+
+      const docRef = await addDoc(checkoutSessionsRef, {
+        price: this.priceId,
+        mode: "payment",
+        success_url: window.location.origin + '/payment/success',
+        cancel_url: window.location.origin + '/payment/cancel',
+      });
+
+      onSnapshot(docRef, (snap) => {
+        const data = snap.data();
+        if (data?.['url']) {
+          window.location.assign(data['url']);
+        }
+      });
+
     });
   }
-
-    
-    /*
-    const checkoutSessionsRef = collection(
-      this.firestore,
-      'customers',
-      this.user!.uid,
-      'checkout_sessions'
-    );
-
-    const docRef = await addDoc(checkoutSessionsRef, {
-      price: this.priceId,
-      mode: "payment",
-      success_url: window.location.origin + '/payment/success',
-      cancel_url: window.location.origin + '/payment/cancel',
-    });
-
-    onSnapshot(docRef, (snap) => {
-      const data = snap.data();
-      if (data?.['url']) {
-        window.location.assign(data['url']);
-      }
-    });
-    */
-  
-
+  /***************** */
+  ngOnDestroy(): void {
+    if (this.authSub) this.authSub.unsubscribe();
+  }
 }

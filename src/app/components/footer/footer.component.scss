@@ -30,12 +30,20 @@
                 margin-bottom: 15px;
             }
         }
+        .trois {
+            div:not(.main):hover {
+                text-decoration: underline;
+            }
+        }
         
         @media screen and (max-width: 700px) {
            .deux, .trois {
                 box-sizing: border-box;
                 width: 50%;
-           }
+                > div:not(.main):hover {
+                    text-decoration: underline;
+                }
+            }
             .un {
                 box-sizing: border-box;
                 width: 100%;

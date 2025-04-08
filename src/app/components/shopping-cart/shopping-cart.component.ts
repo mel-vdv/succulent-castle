@@ -1,8 +1,8 @@
 import { CrudsService } from 'src/app/services/cruds.service';
-import { Component, OnInit } from '@angular/core';
+import { Component, OnDestroy, OnInit } from '@angular/core';
 import { ObjetPanier, Plante } from 'src/app/interfaces/plante';
 import { Router } from '@angular/router';
-import { Observable, take } from 'rxjs';
+import { Observable, Subscription, take } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
 import { FicheService } from 'src/app/services/fiche.service';
@@ -12,10 +12,11 @@ import { FicheService } from 'src/app/services/fiche.service';
   templateUrl: './shopping-cart.component.html',
   styleUrls: ['./shopping-cart.component.scss']
 })
-export class ShoppingCartComponent implements OnInit {
+export class ShoppingCartComponent implements OnInit, OnDestroy {
 
   panier$!: Observable<any> | null;
   user!: User | null;
+  authSub!: Subscription;
   total: number = 0;
 
   constructor(
@@ -30,13 +31,13 @@ export class ShoppingCartComponent implements OnInit {
   }
 
   getUser() {
-    this.authServ.user$.subscribe((user) => {
+    this.authSub = this.authServ.user$.subscribe((user) => {
       if(!!user?.uid) {
         this.user = user;
         this.getPanier();
         this.getTotal();
       }
-      else this.authServ.loginWithGoogle();
+      else this.router.navigate(['/account']);
     });
   }
 
@@ -74,5 +75,9 @@ export class ShoppingCartComponent implements OnInit {
   }
   goPayment() {
     this.router.navigate(['/payment']);
+  }
+  //----------------------
+  ngOnDestroy(): void {
+    if (this.authSub) this.authSub.unsubscribe();
   }
 }
