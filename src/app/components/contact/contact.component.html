@@ -41,8 +41,8 @@
                 </div>
                 <div class="asterix tiny">{{ "champs-oblig" | translate }}</div>
                 <div class="acceptTerms tiny">
-                    <input type="checkbox" formControlName="acceptTerms">
-                    {{ 'case-rgpd'  | translate }}
+                    <input type="checkbox" formControlName="acceptTerms" id="acceptTerms">
+                    <label for="acceptTerms">{{ 'case-rgpd'  | translate }}</label>
                 </div>
                 <div class="send">
                     <button type="submit" [class.invalid]="f.invalid" [disabled]="f.invalid">

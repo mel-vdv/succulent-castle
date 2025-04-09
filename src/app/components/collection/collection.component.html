@@ -2,16 +2,16 @@
     <div class="collection">
         <div class="filtre">
             <div class="par-genre">
-                Filtrer par genre :
-                <select [(ngModel)]="genreChoisi" (change)="triage()">
+                <label for="genre">Filtrer par genre :</label>
+                <select [(ngModel)]="genreChoisi" (change)="triage()" id="genre">
                     <option *ngFor="let genre of genres" [value]="genre">{{genre | titlecase }} </option>
                 </select>
 
             </div>
 
             <div class="tri">
-                Trier par :
-                <select [(ngModel)]="triChoisi" (change)="triage()">
+                <label for="tri">Trier par :</label>
+                <select [(ngModel)]="triChoisi" (change)="triage()" id="tri">
                     <option *ngFor="let tri of tris" [value]="tri">{{tri}}</option>
                 </select>
             </div>
