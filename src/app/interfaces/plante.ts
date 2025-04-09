@@ -1,5 +1,6 @@
 export interface Plante {
     image: string;
+    webp: string;
     genre: string;
     espece: string;
     stock: {

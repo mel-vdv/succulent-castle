@@ -85,7 +85,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     WhatsappComponent,
     GiftsComponent,
     GiftComponent,
-    VirgulePipe,
+    VirgulePipe
   ],
   imports: [
     BrowserModule,
