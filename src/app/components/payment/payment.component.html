@@ -25,7 +25,10 @@
             <div class="recap">
                 <h1>{{"recap-h1" | translate }}</h1>
                 <div class="panier" *ngFor="let p of panier$ | async">
-                    <img [src] ="'assets/PHOTOSWEBP/' + p.plante.image" alt="miniature">
+                    <picture>
+                        <source [srcset]="'assets/PHOTOSWEBP/' + p.plante.webp" type="image/webp">
+                        <img [src]="'assets/PHOTOSWEBP/' + p.plante.webp" alt="miniature">
+                    </picture>
                     <div class="names">
                         <div>{{p.plante.genre}}</div>
                         <div>{{p.plante.espece | titlecase}}</div>

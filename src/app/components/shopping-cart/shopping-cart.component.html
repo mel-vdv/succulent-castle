@@ -17,7 +17,10 @@
             <div class="produits">
                 <div class="produit" *ngFor="let produit of panier$ | async; let i = index;">
                     <div class="image" (click)="navig(produit.plante)">
-                        <img [src]="'assets/PHOTOSWEBP/'+ produit.plante.image" alt="photo plante">
+                        <picture>
+                            <source [srcset]="'assets/PHOTOSWEBP/'+ produit.plante.webp" type="image/webp">
+                            <img [src]="'assets/PHOTOSWEBP/'+ produit.plante.webp" alt="photo plante">
+                        </picture>
                     </div>
                     <div class="blocInfos">
                          <div class="nom">

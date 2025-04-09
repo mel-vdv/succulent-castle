@@ -3,7 +3,10 @@
         <div class="photo">
             <div class="main">
                 <img [src]="'assets/icons/coeur-'+ couleur +'.svg'" alt="coeur" (click)="toogleCoeur()">
-                <img [src]="'assets/PHOTOSWEBP/'+ plante.image" alt="image de la plante">
+                <picture>
+                    <source [srcset]="'assets/PHOTOSWEBP/'+ plante.webp" type="image/webp">
+                    <img [src]="'assets/PHOTOSWEBP/'+ plante.webp" alt="image de la plante">
+                </picture>
             </div>
             <div class="carroussel"></div>
         </div>

@@ -5,7 +5,10 @@
             <div class="case" *ngFor="let g of gifts">
                 <div class="vendu" *ngIf="!g.stock.p.dispo">EN RUPTURE</div>
                 <img src="assets/icons/coeur-pink.svg" alt="coeur" (click)="removeFav(g.image)">
-                <img [src]="'assets/PHOTOSWEBP/' + g.image" alt="plante" (click)="navig(g)">
+                <picture>
+                    <source [srcset]="'assets/PHOTOSWEBP/' + g.webp" type="image/webp">
+                    <img [src]="'assets/PHOTOSWEBP/' + g.webp" alt="plante" (click)="navig(g)">
+                </picture>
                 <div class="genre">{{ g.genre | uppercase }} </div>
                 <div class="espece">{{ g.espece }}</div>
                 <div class="prix">€ {{ g.stock.p.prix | virgule }}</div>
@@ -13,7 +16,10 @@
             <div class="case" *ngFor="let plante of plantes">
                 <div class="vendu" *ngIf="!plante.stock.p.dispo">EN RUPTURE</div>
                 <img src="assets/icons/coeur-pink.svg" alt="coeur" (click)="removeFav(plante.image, 'plantes')">
-                <img [src]="'assets/PHOTOSWEBP/' + plante.image" alt="plante" (click)="navig(plante)">
+                <picture>
+                    <source [srcset]="'assets/PHOTOSWEBP/' + plante.webp" type="images/webp">
+                    <img [src]="'assets/PHOTOSWEBP/' + plante.webp" alt="plante" (click)="navig(plante)">
+                </picture>
                 <div class="genre">{{ plante.genre | uppercase }} </div>
                 <div class="espece">{{ plante.espece }}</div>
                 <div class="prix">€ {{ plante.stock.p.prix | virgule }}</div>
