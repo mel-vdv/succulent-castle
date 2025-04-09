@@ -2,10 +2,12 @@
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { Plante } from 'src/app/interfaces/plante';
 import { AuthService } from 'src/app/services/auth.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
+import { SeoService } from 'src/app/services/seo.service';
 import liste from 'src/assets/listes/liste-gifts.json';
 
 @Component({
@@ -28,13 +30,18 @@ export class GiftComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private crud: CrudsService,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) { }
 
   ngOnInit(): void {
     this.getGift();
     this.getCouleur();
     this.getUser();
+    this.trad.get(["seo.gift"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   getGift() {

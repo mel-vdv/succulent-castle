@@ -8,6 +8,7 @@ import { ActivatedRoute } from '@angular/router';
 import { FicheService } from 'src/app/services/fiche.service';
 import { TranslateService } from '@ngx-translate/core';
 import { Subscription } from 'rxjs';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-account',
@@ -28,7 +29,8 @@ authSub!: Subscription;
     private crud: CrudsService,
     private route: ActivatedRoute,
     private ficheServ: FicheService,
-    private translate: TranslateService
+    private translate: TranslateService,
+    private seoServ: SeoService
   ) {
    }
 
@@ -36,6 +38,9 @@ authSub!: Subscription;
     this.cleanFlags();
     this.getUser();
     this.getNotif();
+    this.translate.get(["seo.account"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   cleanFlags() {

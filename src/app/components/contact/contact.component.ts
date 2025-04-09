@@ -1,7 +1,9 @@
 import { Component, OnInit } from '@angular/core';
 import { FormGroup, FormControl, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { CrudsService } from 'src/app/services/cruds.service';
+import { SeoService } from 'src/app/services/seo.service';
 
 
 @Component({
@@ -17,7 +19,9 @@ export class ContactComponent implements OnInit {
 
   constructor(
     public router: Router,
-    private crud: CrudsService
+    private crud: CrudsService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) {
     this.f = new FormGroup({
       firstname: new FormControl('', Validators.required),
@@ -31,6 +35,9 @@ export class ContactComponent implements OnInit {
    }
 
   ngOnInit(): void {
+    this.trad.get(["seo.contact"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   onSubmit() {

@@ -6,6 +6,8 @@ import { FicheService } from 'src/app/services/fiche.service';
 import  listeGifts  from 'src/assets/listes/liste-gifts.json';
 import { User } from '@angular/fire/auth';
 import { Plante } from 'src/app/interfaces/plante';
+import { TranslateService } from '@ngx-translate/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-gifts',
@@ -18,7 +20,9 @@ export class GiftsComponent implements OnInit {
     public router: Router,
     private ficheServ: FicheService,
     private crud: CrudsService,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) { }
 
   gifts!: Plante[];
@@ -29,6 +33,9 @@ export class GiftsComponent implements OnInit {
     this.getUser();
     this.gifts = listeGifts;
     this.getCoeurs();
+    this.trad.get(["seo.gifts"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
   
   getUser() {

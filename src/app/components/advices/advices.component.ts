@@ -1,4 +1,6 @@
 import { Component, OnInit } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-advices',
@@ -7,9 +9,15 @@ import { Component, OnInit } from '@angular/core';
 })
 export class AdvicesComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+        private trad: TranslateService,
+        private seoServ: SeoService
+  ) { }
 
   ngOnInit(): void {
+    this.trad.get(["seo.advices"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
 }

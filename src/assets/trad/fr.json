@@ -163,6 +163,65 @@
     "preparation": "En cours de préparation",
     "expédié": "Colis expédié",
 
-    "sent-to": "Envoyé à l'adresse suivante"
+    "sent-to": "Envoyé à l'adresse suivante",
+
+    "seo": {
+        "home": {
+            "t": "Page d'accueil du site Succulent Castle",
+            "d": "Site e-commerce de vente en ligne de plantes grasses, succulentes et de terrariums, décoration intérieure"
+        },
+        "collection": {
+            "t": "Page de la collection de plantes grasses succulentes",
+            "d": ""
+        },
+        "description": {
+            "t": "Page de fiche descriptive de chaque plantes grasse succulente",
+            "d": "espèce, genre, prix selon l'opion choisie (plante entière, feuille, rosette, avec ou sans racines, graines)"
+        },
+        "gifts": {
+            "t": "",
+            "d": ""
+        },
+        "gift": {
+            "t": "",
+            "d": ""
+        },
+        "advices": {
+            "t": "",
+            "d": ""
+        },
+        "contact": {
+            "t": "",
+            "d": ""
+        },
+        "shopping-cart": {
+            "t": "",
+            "d": ""
+        },
+        "favorites": {
+            "t": "",
+            "d": ""
+        },
+        "account": {
+            "t": "",
+            "d": ""
+        },
+        "payment": {
+            "t": "",
+            "d": ""
+        },
+        "faq": {
+            "t": "",
+            "d": ""
+        },
+        "cgv": {
+            "t": "",
+            "d": ""
+        },
+        "rgpd": {
+            "t": "",
+            "d": ""
+        }
+    }
 
 }

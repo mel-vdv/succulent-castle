@@ -6,6 +6,8 @@ import { Observable, Subscription, take } from 'rxjs';
 import { AuthService } from 'src/app/services/auth.service';
 import { User } from '@angular/fire/auth';
 import { FicheService } from 'src/app/services/fiche.service';
+import { SeoService } from 'src/app/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 @Component({
   selector: 'app-shopping-cart',
@@ -23,11 +25,16 @@ export class ShoppingCartComponent implements OnInit, OnDestroy {
     private crud: CrudsService,
     public router : Router,
     private authServ: AuthService,
-    private ficheServ: FicheService
+    private ficheServ: FicheService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) { }
 
   ngOnInit(): void {
     this.getUser();
+    this.trad.get(["seo.shopping-cart"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   getUser() {

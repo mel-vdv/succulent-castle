@@ -2,10 +2,12 @@ import { AuthService } from './../../services/auth.service';
 import { Component, OnInit } from '@angular/core';
 import { User } from '@angular/fire/auth';
 import { ActivatedRoute, Router } from '@angular/router';
+import { TranslateService } from '@ngx-translate/core';
 import { take } from 'rxjs';
 import { Plante } from 'src/app/interfaces/plante';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { FicheService } from 'src/app/services/fiche.service';
+import { SeoService } from 'src/app/services/seo.service';
 import liste from 'src/assets/listes/liste-plantes.json';
 
 @Component({
@@ -34,13 +36,18 @@ export class DescriptionComponent implements OnInit {
     private route: ActivatedRoute,
     private router: Router,
     private crud: CrudsService,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) { }
 
   ngOnInit(): void {
     this.getUser();
     this.getPlante();
     this.getCouleur();
+    this.trad.get(["seo.description"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   getUser() {

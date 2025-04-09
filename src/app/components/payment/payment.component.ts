@@ -12,6 +12,8 @@ import { BpostService } from 'src/app/services/bpost.service';
 import { FicheService } from 'src/app/services/fiche.service';
 import { CrudsService } from 'src/app/services/cruds.service';
 import { AuthService } from 'src/app/services/auth.service';
+import { SeoService } from 'src/app/services/seo.service';
+import { TranslateService } from '@ngx-translate/core';
 
 
 @Component({
@@ -45,11 +47,16 @@ export class PaymentComponent implements OnInit, OnDestroy {
     private router: Router,
     private authServ: AuthService,
     private bpost: BpostService,
-    private ficheServ: FicheService
+    private ficheServ: FicheService,
+    private trad: TranslateService,
+    private seoServ: SeoService
     ) { }
 
   ngOnInit(): void {
     this.getUser();
+    this.trad.get(["seo.payment"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
 
   getUser() {

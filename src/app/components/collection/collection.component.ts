@@ -7,6 +7,8 @@ import { FicheService } from 'src/app/services/fiche.service';
 import  liste  from 'src/assets/listes/liste-plantes.json';
 import { genres } from 'src/app/constantes/genres';
 import { User } from '@angular/fire/auth';
+import { TranslateService } from '@ngx-translate/core';
+import { SeoService } from 'src/app/services/seo.service';
 
 @Component({
   selector: 'app-collection',
@@ -19,7 +21,9 @@ export class CollectionComponent implements OnInit {
     public router: Router,
     private ficheServ: FicheService,
     private crud: CrudsService,
-    private authServ: AuthService
+    private authServ: AuthService,
+    private trad: TranslateService,
+    private seoServ: SeoService
   ) { }
 
   plantes!: Plante[];
@@ -35,6 +39,9 @@ export class CollectionComponent implements OnInit {
     this.getUser();
     this.plantes = liste;
     this.getCoeurs();
+    this.trad.get(["seo.collection"]).subscribe(data => {
+      this.seoServ.updateSeo(data.t, data.d);
+    });
   }
   
   getUser() {
