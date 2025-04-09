@@ -1,6 +1,7 @@
 [
   {
     "image": "AEONIUM pink witch.jpg",
+    "webp": "AEONIUM pink witch.webp",
     "genre": "AEONIUM",
     "espece": "Pink Witch",
     "stock": {
@@ -26,20 +27,21 @@
         "dispo": 0
       },
       "rr": {
-        "prix": 6,
-        "dispo": 3
+        "prix": 25.5,
+        "dispo": 0
       }
     },
     "coeur": "blanc"
   },
   {
     "image": "COTYLEDON orbiculata var panachée.png",
+    "webp": "COTYLEDON orbiculata var panachée.webp",
     "genre": "COTYLEDON",
     "espece": "Orbiculata var panachée",
     "stock": {
       "p": {
         "prix": 62,
-        "dispo": 5,
+        "dispo": 8.5,
         "diam": 5
       },
       "g": {
@@ -67,6 +69,7 @@
   },
   {
     "image": "COTYLEDON orbiculata.jpg",
+    "webp": "COTYLEDON orbiculata.webp",
     "genre": "COTYLEDON",
     "espece": "Orbiculata",
     "stock": {
@@ -100,6 +103,7 @@
   },
   {
     "image": "COTYLEDON orbiculata 2.jpg",
+    "webp": "COTYLEDON orbiculata 2.webp",
     "genre": "COTYLEDON",
     "espece": "Orbiculata",
     "stock": {
@@ -133,6 +137,7 @@
   },
   {
     "image": "COTYLEDON tomentosa.jpg",
+    "webp": "COTYLEDON tomentosa.webp",
     "genre": "COTYLEDON",
     "espece": "Tomentosa",
     "stock": {
@@ -166,8 +171,9 @@
   },
   {
     "image": "CRASSULA capitella.jpg",
+    "webp": "CRASSULA capitella.webp",
     "genre": "CRASSULA",
-    "espece": "Capitella ",
+    "espece": "Capitella",
     "stock": {
       "p": {
         "prix": 14,
@@ -199,6 +205,7 @@
   },
   {
     "image": "CRASSULA mesembryanthoide.jpg",
+    "webp": "CRASSULA mesembryanthoide.webp",
     "genre": "CRASSULA",
     "espece": "Mesembryanthoide",
     "stock": {
@@ -232,6 +239,7 @@
   },
   {
     "image": "CRASSULA tarantula.jpg",
+    "webp": "CRASSULA tarantula.webp",
     "genre": "CRASSULA",
     "espece": "Tarantula",
     "stock": {
@@ -265,6 +273,7 @@
   },
   {
     "image": "DELOSPERMA lehmannii.jpg",
+    "webp": "DELOSPERMA lehmannii.webp",
     "genre": "DELOSPERMA",
     "espece": "Lehmannii",
     "stock": {
@@ -298,6 +307,7 @@
   },
   {
     "image": "ECHEVERIA agavoides.jpg",
+    "webp": "ECHEVERIA agavoides.webp",
     "genre": "ECHEVERIA",
     "espece": "Agavoides",
     "stock": {
@@ -331,6 +341,7 @@
   },
   {
     "image": "ECHEVERIA Beyoncé panaché.png",
+    "webp": "ECHEVERIA Beyoncé panaché.webp",
     "genre": "ECHEVERIA",
     "espece": "Beyoncé panaché",
     "stock": {
@@ -364,6 +375,7 @@
   },
   {
     "image": "ECHEVERIA black madiba.png",
+    "webp": "ECHEVERIA black madiba.webp",
     "genre": "ECHEVERIA",
     "espece": "Black madiba",
     "stock": {
@@ -397,6 +409,7 @@
   },
   {
     "image": "ECHEVERIA blauw pauw paon bleu.jpg",
+    "webp": "ECHEVERIA blauw pauw paon bleu.webp",
     "genre": "ECHEVERIA",
     "espece": "Paon bleu",
     "stock": {
@@ -430,6 +443,7 @@
   },
   {
     "image": "ECHEVERIA champagne.png",
+    "webp": "ECHEVERIA champagne.webp",
     "genre": "ECHEVERIA",
     "espece": "Champagne",
     "stock": {
@@ -463,6 +477,7 @@
   },
   {
     "image": "ECHEVERIA claudia.jpg",
+    "webp": "ECHEVERIA claudia.webp",
     "genre": "ECHEVERIA",
     "espece": "Claudia",
     "stock": {
@@ -496,6 +511,7 @@
   },
   {
     "image": "ECHEVERIA cubic frost.jpg",
+    "webp": "ECHEVERIA cubic frost.webp",
     "genre": "ECHEVERIA",
     "espece": "Cubic frost",
     "stock": {
@@ -529,6 +545,7 @@
   },
   {
     "image": "ECHEVERIA elegans.png",
+    "webp": "ECHEVERIA elegans.webp",
     "genre": "ECHEVERIA",
     "espece": "Elegans",
     "stock": {
@@ -562,6 +579,7 @@
   },
   {
     "image": "ECHEVERIA lilacina.jpg",
+    "webp": "ECHEVERIA lilacina.webp",
     "genre": "ECHEVERIA",
     "espece": "Lilacina",
     "stock": {
@@ -595,6 +613,7 @@
   },
   {
     "image": "ECHEVERIA Perle von Nurnberg.jpg",
+    "webp": "ECHEVERIA Perle von Nurnberg.webp",
     "genre": "ECHEVERIA",
     "espece": "Perle von Nurnberg",
     "stock": {
@@ -628,6 +647,7 @@
   },
   {
     "image": "ECHEVERIA pidan.png",
+    "webp": "ECHEVERIA pidan.webp",
     "genre": "ECHEVERIA",
     "espece": "Pidan",
     "stock": {
@@ -661,6 +681,7 @@
   },
   {
     "image": "ECHEVERIA pidan.jpg",
+    "webp": "ECHEVERIA pidan.webp",
     "genre": "ECHEVERIA",
     "espece": "Pidan",
     "stock": {
@@ -694,6 +715,7 @@
   },
   {
     "image": "ECHEVERIA pink ruby.png",
+    "webp": "ECHEVERIA pink ruby.webp",
     "genre": "ECHEVERIA",
     "espece": "Pink ruby",
     "stock": {
@@ -727,6 +749,7 @@
   },
   {
     "image": "ECHEVERIA purpusiorum.jpg",
+    "webp": "ECHEVERIA purpusiorum.webp",
     "genre": "ECHEVERIA",
     "espece": "Purpusiorum",
     "stock": {
@@ -760,6 +783,7 @@
   },
   {
     "image": "ECHEVERIA rainbow.jpg",
+    "webp": "ECHEVERIA rainbow.webp",
     "genre": "ECHEVERIA",
     "espece": "rainbow",
     "stock": {
@@ -793,6 +817,7 @@
   },
   {
     "image": "ECHEVERIA soul.png",
+    "webp": "ECHEVERIA soul.webp",
     "genre": "ECHEVERIA",
     "espece": "soul",
     "stock": {
@@ -826,6 +851,7 @@
   },
   {
     "image": "ECHEVERIA strawberry jam.jpg",
+    "webp": "ECHEVERIA strawberry jam.webp",
     "genre": "ECHEVERIA",
     "espece": "strawberry jam",
     "stock": {
@@ -859,6 +885,7 @@
   },
   {
     "image": "ECHEVERIA violet.png",
+    "webp": "ECHEVERIA violet.webp",
     "genre": "ECHEVERIA",
     "espece": "violet",
     "stock": {
@@ -892,6 +919,7 @@
   },
   {
     "image": "FENESTRARIA auriantica.png",
+    "webp": "FENESTRARIA auriantica.webp",
     "genre": "FENESTRARIA",
     "espece": "auriantica",
     "stock": {
@@ -925,6 +953,7 @@
   },
   {
     "image": "FRITHIA Pulchra panachée.png",
+    "webp": "FRITHIA Pulchra panachée.webp",
     "genre": "FRITHIA",
     "espece": "Pulchra panachée",
     "stock": {
@@ -958,6 +987,7 @@
   },
   {
     "image": "GRAPTOPETALUM amethystinum.jpg",
+    "webp": "GRAPTOPETALUM amethystinum.webp",
     "genre": "GRAPTOPETALUM",
     "espece": "amethystinum",
     "stock": {
@@ -991,6 +1021,7 @@
   },
   {
     "image": "GRAPTOPETALUM paraguayense.jpg",
+    "webp": "GRAPTOPETALUM paraguayense.webp",
     "genre": "GRAPTOPETALUM",
     "espece": "paraguayense",
     "stock": {
@@ -1024,6 +1055,7 @@
   },
   {
     "image": "GRAPTOPETALUM paraguayense 2.jpg",
+    "webp": "GRAPTOPETALUM paraguayense 2.webp",
     "genre": "GRAPTOPETALUM",
     "espece": "paraguayense",
     "stock": {
@@ -1057,6 +1089,7 @@
   },
   {
     "image": "GREENOVIA Aurea ex El Hierro.png",
+    "webp": "GREENOVIA Aurea ex El Hierro.webp",
     "genre": "GREENOVIA",
     "espece": "Aurea ex El Hierro 'Rose des montagnes rose'",
     "stock": {
@@ -1090,6 +1123,7 @@
   },
   {
     "image": "GREENOVIA dodrentalis.png",
+    "webp": "GREENOVIA dodrentalis.webp",
     "genre": "GREENOVIA",
     "espece": "dodrentalis",
     "stock": {
@@ -1123,6 +1157,7 @@
   },
   {
     "image": "GREENOVIA La Palma.png",
+    "webp": "GREENOVIA La Palma.webp",
     "genre": "GREENOVIA",
     "espece": "La Palma",
     "stock": {
@@ -1156,6 +1191,7 @@
   },
   {
     "image": "GREENOVIA Princess Lola.png",
+    "webp": "GREENOVIA Princess Lola.webp",
     "genre": "GREENOVIA",
     "espece": "Princess Lola",
     "stock": {
@@ -1189,6 +1225,7 @@
   },
   {
     "image": "HAWORTHIA cooperi.jpg",
+    "webp": "HAWORTHIA cooperi.webp",
     "genre": "HAWORTHIA",
     "espece": "cooperi",
     "stock": {
@@ -1222,6 +1259,7 @@
   },
   {
     "image": "HAWORTHIA cymbiformis.png",
+    "webp": "HAWORTHIA cymbiformis.webp",
     "genre": "HAWORTHIA",
     "espece": "cymbiformis",
     "stock": {
@@ -1255,6 +1293,7 @@
   },
   {
     "image": "HAWORTHIA symbiformis.jpg",
+    "webp": "HAWORTHIA symbiformis.webp",
     "genre": "HAWORTHIA",
     "espece": "symbiformis.",
     "stock": {
@@ -1288,6 +1327,7 @@
   },
   {
     "image": "KALANCHOE fedtschenkoi.jpg",
+    "webp": "KALANCHOE fedtschenkoi.webp",
     "genre": "KALANCHOE",
     "espece": "fedtschenkoi",
     "stock": {
@@ -1321,6 +1361,7 @@
   },
   {
     "image": "KALANCHOE.jpg",
+    "webp": "KALANCHOE.webp",
     "genre": "KALANCHOE",
     "espece": "",
     "stock": {
@@ -1354,6 +1395,7 @@
   },
   {
     "image": "LITHOPS optica.jpg",
+    "webp": "LITHOPS optica.webp",
     "genre": "LITHOPS",
     "espece": "optica",
     "stock": {
@@ -1387,6 +1429,7 @@
   },
   {
     "image": "PACHYPHYTUM Capitaine Jessop.png",
+    "webp": "PACHYPHYTUM Capitaine Jessop.webp",
     "genre": "PACHYPHYTUM",
     "espece": "Capitaine Jessop",
     "stock": {
@@ -1420,6 +1463,7 @@
   },
   {
     "image": "PACHYPHYTUM compactum.jpg",
+    "webp": "PACHYPHYTUM compactum.webp",
     "genre": "PACHYPHYTUM",
     "espece": "compactum",
     "stock": {
@@ -1453,6 +1497,7 @@
   },
   {
     "image": "PACHYPHYTUM oviferum.jpg",
+    "webp": "PACHYPHYTUM oviferum.webp",
     "genre": "PACHYPHYTUM",
     "espece": "oviferum",
     "stock": {
@@ -1486,6 +1531,7 @@
   },
   {
     "image": "SEDUM adolphii.jpg",
+    "webp": "SEDUM adolphii.webp",
     "genre": "SEDUM",
     "espece": "Adolphii",
     "stock": {
@@ -1519,6 +1565,7 @@
   },
   {
     "image": "SEDUM adolphii golden glow.jpg",
+    "webp": "SEDUM adolphii golden glow.webp",
     "genre": "SEDUM",
     "espece": "Adolphii golden glow",
     "stock": {
@@ -1552,6 +1599,7 @@
   },
   {
     "image": "SEDUM dasyphyllum.jpg",
+    "webp": "SEDUM dasyphyllum.webp",
     "genre": "SEDUM",
     "espece": "Dasyphyllum",
     "stock": {
@@ -1585,6 +1633,7 @@
   },
   {
     "image": "SEDUM mendozae.jpg",
+    "webp": "SEDUM mendozae.webp",
     "genre": "SEDUM",
     "espece": "Mendozae",
     "stock": {
@@ -1618,6 +1667,7 @@
   },
   {
     "image": "SEDUM rubrotinctum.jpg",
+    "webp": "SEDUM rubrotinctum.webp",
     "genre": "SEDUM",
     "espece": "Rubrotinctum",
     "stock": {
@@ -1651,6 +1701,7 @@
   },
   {
     "image": "SEDUM.jpg",
+    "webp": "SEDUM.webp",
     "genre": "SEDUM",
     "espece": "",
     "stock": {
@@ -1684,6 +1735,7 @@
   },
   {
     "image": "SEMPERVIVUM globiferum.jpg",
+    "webp": "SEMPERVIVUM globiferum.webp",
     "genre": "SEMPERVIVUM",
     "espece": "globiferum",
     "stock": {
@@ -1717,6 +1769,7 @@
   },
   {
     "image": "SEMPERVIVUM.jpg",
+    "webp": "SEMPERVIVUM.webp",
     "genre": "SEMPERVIVUM",
     "espece": "-",
     "stock": {
@@ -1750,6 +1803,7 @@
   },
   {
     "image": "TITANOPSIS calcarea.jpg",
+    "webp": "TITANOPSIS calcarea.webp",
     "genre": "TITANOPSIS",
     "espece": "Calcarea",
     "stock": {

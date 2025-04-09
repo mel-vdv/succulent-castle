@@ -1,6 +1,7 @@
 [
     {
       "image": "gift1.png",
+      "webp": "gift1.webp",
       "genre": "Coffret",
       "espece": " 'blue dream'",
       "stock": {
@@ -15,6 +16,7 @@
     },
     {
       "image": "gift2.png",
+      "webp": "gift2.webp",
       "genre": "Terrarium",
       "espece": "'Forêt miniature'",
       "stock": {
