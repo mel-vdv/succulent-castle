@@ -33,6 +33,7 @@
                 }
                 img[alt="menu-burger"] {
                     height: 30px;
+                    width: 40px;
                     margin-right: 10px;
                 }
                 .menuOpened {
@@ -64,7 +65,7 @@
             }
             img[alt='icons'] {
                 height: 30px;
-                max-width: 30px;
+                width: 30px;
                 margin: 0;
                 z-index: 1;
             }

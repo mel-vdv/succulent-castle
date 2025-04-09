@@ -8,13 +8,11 @@ import { FicheService } from 'src/app/services/fiche.service';
 import listePlantes from 'src/assets/listes/liste-plantes.json';
 import listeGifts from 'src/assets/listes/liste-gifts.json';
 import { Subscription } from 'rxjs';
-import { VirgulePipe } from "../../pipes/virgule.pipe";
 
 @Component({
   selector: 'app-favorites',
   templateUrl: './favorites.component.html',
   styleUrls: ['./favorites.component.scss'],
-  imports: [VirgulePipe]
 })
 export class FavoritesComponent implements OnInit, OnDestroy {
 
